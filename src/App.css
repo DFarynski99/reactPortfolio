@@ -1,5 +1,3 @@
-/* App.css or the main CSS file */
-
 html{
     background-color: #1c1c1c;
 }
@@ -38,7 +36,6 @@ html{
     align-items: center; /* center children horizontally */
     outline: pink 5px dotted;
 }
-
 #AppContainer{
     width: 80%; /* The container takes the full width of its parent */
 }
@@ -58,6 +55,9 @@ html{
     display: flex; /* enable flexbox */
     flex-direction: column; /* stack children vertically */
     align-items: center; /* center children horizontally */
+}
+#leftPanelLite{
+    display: none;
 }
 #leftPanelLetterD{
     background-color: black;
@@ -170,12 +170,10 @@ html{
     height: 100vh;
     min-height: 100vh; /* Or any appropriate styling */
 }
-
 #aboutMeHeading, #techStackHeading{
     font-family: 'TikTok Font Bold', serif;
     font-size: 3.5rem;
 }
-
 #aboutMeBlock{
     outline: orange 2px dotted !important;
     width: 40%;
@@ -202,37 +200,6 @@ html{
     position: relative;
     padding-top: 7.5%;
 }
-
-/* Initial state */
-.aboutMe-enter {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-10%);
-    transition: all 1s;
-}
-.aboutMe-enter.visible {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
-
-
-.aboutMe-enter2 {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(10%);
-    transition: all 0.8s;
-}
-/* State when the component is visible */
-.aboutMe-enter2.visible {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
-
-/* State when the component is visible */
-
-
 #techStackText{
     font-family: 'TikTok Font Regular', serif;
     font-size: 1rem;
@@ -242,7 +209,6 @@ html{
     transform: translateX(-50%);
     position: relative;
 }
-
 #techStackBlock{
     outline: orange 2px dotted;
     width: 40%;
@@ -266,9 +232,32 @@ html{
 }
 
 
+/* Transitions */
+.aboutMe-enter {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-10%);
+    transition: all 1s;
+}
+.aboutMe-enter.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.aboutMe-enter2 {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(10%);
+    transition: all 1s;
+}
+.aboutMe-enter2.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 
 /* Project Card Container */
-
 #projectCardContainer{
     position: relative;
     outline: aqua 5px dotted;
@@ -363,7 +352,6 @@ html{
     width: 50% !important;
     font-family: 'Tiktok Font Regular', serif;
 }
-
 #loadMoreProjectsButton{
     width: 12.5%;
     left: 50%;
@@ -380,6 +368,8 @@ html{
     cursor: pointer;
 }
 
+
+/* Contact Section */
 #contactSection{
     outline: green 2px dotted;
     height: 100vh;
@@ -392,7 +382,6 @@ html{
     padding-top: 5%;
     outline: blue 2px dotted;
 }
-
 #contactMethodContainer{
 
 }
@@ -406,7 +395,6 @@ html{
     font-size: 1.5rem;
     text-decoration: underline;
 }
-
 .contactSectionGitHub, .contactSectionGmail, .contactSectionLinkedin{
     outline: red 2px dotted;
     width: fit-content;
@@ -419,6 +407,17 @@ html{
     align-items: center;  /* Centers items vertically */
     justify-content: center; /* Centers items horizontally */
 }
+#cardFive .projectCardGitHub{
+    display: none;
+}
+#cardFive #localHost{
+    outline: red 2px dotted;
+    width: 100% !important;
+    left: 0;
+}
+
+
+/* Footer Section */
 #footerContainer{
     width: 100%;
 }
@@ -429,7 +428,6 @@ html{
     position: absolute;
     left: 0;
 }
-
 #aboutFooter, #projectsFooter, #contactFooter{
     outline: blue 2px dotted;
     text-align: center;
@@ -442,7 +440,6 @@ html{
     font-family: 'Tiktok Font Regular', serif;
     font-size: 0.9em;
 }
-
 #createdBy{
     color: grey;
     text-align: center;
@@ -451,11 +448,92 @@ html{
     margin-top: 1%;
 }
 
-#cardFive .projectCardGitHub{
-    display: none;
+
+@media only screen and (min-width: 1281px) and (max-width: 1440px){
+
+    #HTML, #CSS, #JavaScript, #React, #Python, #Github, #SQL, #Java, #Figma, #WebScraping, #IFTTTWebhook, #AWS, #reCaptchaBypass, #botBypass, #Flask, #Selenium{
+        background-color: #d5d5d5;
+        color: #333;
+        border: 1px solid #000000;
+        border-radius: 20px; /* Adjust for rounded corners */
+        padding: 15px 25px;
+        display: inline-block;
+        margin: 5px;
+        font-size: 0.75em;
+        text-align: center;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading{
+        font-family: 'TikTok Font Bold', serif;
+        font-size: 3rem;
+    }
+
 }
-#cardFive #localHost{
-    outline: red 2px dotted;
-    width: 100% !important;
-    left: 0;
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+
+    #role{
+        font-size:0.8rem;
+    }
+    #HTML, #CSS, #JavaScript, #React, #Python, #Github, #SQL, #Java, #Figma, #WebScraping, #IFTTTWebhook, #AWS, #reCaptchaBypass, #botBypass, #Flask, #Selenium{
+        padding: 10px 21px;
+        font-size: 0.75em;
+    }
+    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading{
+        font-family: 'TikTok Font Bold', serif;
+        font-size: 3rem;
+    }
+
+    #githubImageLeftPanel{
+        left: 20%;
+        transform: translateX(-20%);
+    }
+    #linkedinImageLeftPanel{
+        left: 80%;
+        transform: translateX(-80%);
+    }
+
+    #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
+        font-size: 4.85rem;
+    }
+
 }
+
+
+@media only screen and (min-width: 822px) and (max-width: 1024px){
+
+    #leftPanel, #leftPanelLetterD, #letterD, #role{
+        display: none;
+    }
+
+    #leftPanelLite{
+        outline: rebeccapurple 5px dotted;
+        position: absolute;
+        left: 0;
+        width: 10%;
+        transition: width 0.5s ease; /* Smooth transition for the width property */
+        height: 100%;
+        top: 0;
+        z-index: 2;
+        background-color: #181818;
+        display: flex; /* enable flexbox */
+        flex-direction: column; /* stack children vertically */
+        align-items: center; /* center children horizontally */
+    }
+    #leftPanelLiteMenuImage{
+        outline: red 2px dotted;
+        background-color: transparent;
+        border: none;
+        left: 20px;
+        top: 10%;
+        position: absolute;
+    }
+
+
+}
+
+
+
+
+
+

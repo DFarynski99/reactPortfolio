@@ -1,4 +1,5 @@
 import LeftPanel from "./components/LeftPanel/LeftPanel";
+import LeftPanelLite from './components/LeftPanelLite/LeftPanelLite'
 import Heroshot from "./components/Heroshot/Heroshot";
 import About from "./components/About/About";
 import Project from "./components/Project/Project";
@@ -11,6 +12,7 @@ function App() {
     <>
       <div id="AppContainer">
         <LeftPanel />
+        <LeftPanelLite />
         <Heroshot />
         <About />
         <Project />
