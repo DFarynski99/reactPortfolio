@@ -144,9 +144,29 @@ html{
     padding-top: 2.5%;
     width: fit-content;
 }
+#contrastLetter{
+    font-size: 6rem;
+}
 #heroshotHeading2{
     word-spacing: 15px;
 }
+#currentStatus{
+    font-family: "TikTok Font Regular", serif;
+    width: fit-content;
+    font-size: 1.3rem;
+    margin-top: 11%;
+    color: grey;
+}
+#scrollDown{
+    font-family: 'Tiktok Font Regular', serif;
+    transform: rotate(90deg);
+    width: fit-content;
+    margin-left: -7%;
+    top: 80%;
+    position: absolute;
+}
+
+
 .bounce {
     animation: bounce 0.5s ease forwards;
 }
@@ -230,7 +250,7 @@ html{
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-10%);
-    transition: all 1s;
+    transition: all 0.5s;
     will-change: opacity, filter, transform; /* Hint to browsers to optimize */
 
 }
@@ -243,7 +263,7 @@ html{
     opacity: 0;
     filter: blur(5px);
     transform: translateX(10%);
-    transition: all 1s;
+    transition: all 0.5s;
     will-change: opacity, filter, transform; /* Hint to browsers to optimize */
 }
 .aboutMe-enter2.visible {
@@ -493,6 +513,9 @@ html{
     #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
         font-size: 4.85rem;
     }
+    #contrastLetter{
+        font-size: 5.35rem;
+    }
     #cardThree, #cardFour, #cardFive{
         padding-top: 4%;
     }
@@ -617,6 +640,13 @@ html{
 
 @media only screen and (min-width: 769px) and (max-width: 821px){
 
+    #currentStatus{
+        margin-top: 18%;
+    }
+    #scrollDown{
+        margin-left: -11%;
+    }
+
     #leftPanel, #leftPanelLetterD, #letterD, #role{
         display: none;
     }
@@ -730,8 +760,18 @@ html{
 
 @media only screen and (min-width: 501px) and (max-width: 768px){
 
+    #currentStatus{
+        margin-top: 18%;
+    }
+    #scrollDown{
+        margin-left: -11%;
+    }
+
     #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
         font-size: 4.5rem;
+    }
+    #contrastLetter{
+        font-size: 5rem;
     }
     #heroshotHeading1 {
         margin-top: 22%;
@@ -868,11 +908,23 @@ html{
 
 @media only screen and (min-width: 335px) and (max-width: 500px){
 
+    #currentStatus{
+        margin-top: 30%;
+        font-size: 1rem;
+    }
+    #scrollDown{
+        margin-left: -17%;
+        font-size: 0.9rem;
+    }
+
     #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
-        font-size: 3.5rem;
+        font-size: 3.25rem;
+    }
+    #contrastLetter{
+        font-size: 3.6rem;
     }
     #heroshotHeading1 {
-        margin-top: 22%;
+        margin-top: 30%;
     }
 
     #leftPanel, #leftPanelLetterD, #letterD, #role{
@@ -1020,11 +1072,23 @@ html{
 
 @media only screen and (max-width: 334px){
 
+    #currentStatus{
+        margin-top: 30%;
+        font-size: 1rem;
+    }
+    #scrollDown{
+        margin-left: -17%;
+        font-size: 0.9rem;
+    }
+
     #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
-        font-size: 3.4rem;
+        font-size: 3.25rem;
+    }
+    #contrastLetter{
+        font-size: 3.6rem;
     }
     #heroshotHeading1 {
-        margin-top: 22%;
+        margin-top: 30%;
     }
 
     #leftPanel, #leftPanelLetterD, #letterD, #role{

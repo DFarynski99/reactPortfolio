@@ -23,7 +23,7 @@ export default function HeroshotHeadings({ text, id }) {
         return (
             <div id={id} className={className} onMouseEnter={handleMouseEnter} onAnimationEnd={handleAnimationEnd}>
                 {textBeforeD}
-                <span style={{ color: '#fd3851', textShadow: '-7px 0 0 #00dfd8' }}>{letterD}</span>
+                <span id={'contrastLetter'} style={{ color: '#fd3851', textShadow: '-7px 0 0 #00dfd8' }}>{letterD}</span>
                 {textAfterD}
             </div>
         );
