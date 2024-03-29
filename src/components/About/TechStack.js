@@ -52,10 +52,6 @@ export default function AboutMe({ sectionTitle }) {
             id={"reCaptchaBypass"}
             tech={"ReCaptcha Bypass"}
           />
-          <TechStackComponents
-            id={"botBypass"}
-            tech={"Bot/Automation Bypass"}
-          />
           <TechStackComponents id={"Flask"} tech={"Flask"} />
           <TechStackComponents id={"Selenium"} tech={"Selenium"} />
         </div>

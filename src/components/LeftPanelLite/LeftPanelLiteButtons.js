@@ -1,6 +1,6 @@
-export default function LeftPanelLiteButtons({id, buttonType, onClick}){
+export default function LeftPanelLiteButtons({divID, id, buttonType, onClick}){
 
-    return <div>
+    return <div id={divID}>
         <button id={id} onClick={onClick}>{buttonType}</button>
     </div>
 }

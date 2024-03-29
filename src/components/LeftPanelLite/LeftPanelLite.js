@@ -4,12 +4,18 @@ import LeftPanelLiteButtons from './LeftPanelLiteButtons'
 export default function LeftPanelLite({onClick}){
 
     const handleHamburgerMenuClick = () => {
-        const leftPanelLite = document.getElementById('leftPanelLite');
-        if (leftPanelLite) {
-            // Check the current width and toggle between 10% and 80%
-            leftPanelLite.style.width = leftPanelLite.style.width === '80%' ? '10%' : '80%';
-        }
-    };
+        // Assuming 'leftPanelMoving' is a class shared by the panels you want to toggle
+        var hiddenLeftPanels = document.querySelectorAll('.leftPanelMoving'); // Use '.' for class
+        Array.from(hiddenLeftPanels).forEach(function(panel) {
+            // Toggle the 'visible' class
+            if (panel.classList.contains('visible')) {
+                panel.classList.remove('visible');
+            } else {
+                panel.classList.add('visible');
+            }
+        }); // Added the missing closing parenthesis and semicolon
+    }
+
 
     const handleLiteAboutClick = () => {
         const aboutContainer = document.getElementById('aboutContainer');
@@ -34,12 +40,15 @@ export default function LeftPanelLite({onClick}){
     }
 
 
-    return <div id={'leftPanelLite'}>
-        <button onClick={handleHamburgerMenuClick} id={'leftPanelLiteMenuImage'}><img src={hamburgerMenuImage}/></button>
+    return <><div id={'leftPanelLite'}>
+        <button onClick={handleHamburgerMenuClick} id={'leftPanelLiteMenuImage'}><img id='liteButtonImg' src={hamburgerMenuImage}/></button>
+        </div>
 
-        <LeftPanelLiteButtons id={'liteAboutButton'} onClick={handleLiteAboutClick} buttonType={'About'} />
-        <LeftPanelLiteButtons id={'liteProjectsButton'} onClick={handleLiteProjectsClick} buttonType={'Projects'} />
-        <LeftPanelLiteButtons id={'liteContactButton'} onClick={handleLiteContactClick} buttonType={'Contact'} />
+        <div className={'leftPanelMoving'}>
+        <LeftPanelLiteButtons divID={'liteAboutDiv'} id={'liteAboutButton'} onClick={handleLiteAboutClick} buttonType={'About'} />
+        <LeftPanelLiteButtons divID={'liteProjectsDiv'} id={'liteProjectsButton'} onClick={handleLiteProjectsClick} buttonType={'Projects'} />
+        <LeftPanelLiteButtons divID={'liteContactDiv'} id={'liteContactButton'} onClick={handleLiteContactClick} buttonType={'Contact'} />
+        </div>
+        </>
 
-    </div>
 }

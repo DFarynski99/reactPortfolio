@@ -56,7 +56,7 @@ html{
     flex-direction: column; /* stack children vertically */
     align-items: center; /* center children horizontally */
 }
-#leftPanelLite{
+#leftPanelLite, .leftPanelMoving{
     display: none;
 }
 #leftPanelLetterD{
@@ -170,10 +170,14 @@ html{
     height: 100vh;
     min-height: 100vh; /* Or any appropriate styling */
 }
+
+
 #aboutMeHeading, #techStackHeading{
     font-family: 'TikTok Font Bold', serif;
     font-size: 3.5rem;
 }
+
+
 #aboutMeBlock{
     outline: orange 2px dotted !important;
     width: 40%;
@@ -181,14 +185,6 @@ html{
     position: relative;
     left: 10%;
     padding-top: 7.5%;
-}
-#techStackBlock{
-    outline: orange 2px dotted;
-    width: 40% !important;
-    text-align: center;
-    position: relative;
-    padding-top: 7.5%;
-
 }
 #aboutMeText{
     font-family: 'TikTok Font Regular', serif;
@@ -200,10 +196,12 @@ html{
     position: relative;
     padding-top: 7.5%;
 }
+
+
 #techStackText{
     font-family: 'TikTok Font Regular', serif;
     font-size: 1rem;
-    width: 60%;
+    width: 70%;
     outline: red 2px dotted;
     left: 50%;
     transform: translateX(-50%);
@@ -211,11 +209,12 @@ html{
 }
 #techStackBlock{
     outline: orange 2px dotted;
-    width: 40%;
     position: absolute;
     left: 50%;
     top: 0;
     text-align: center;
+    width: 40%;
+    padding-top: 7.5%;
 }
 #HTML, #CSS, #JavaScript, #React, #Python, #Github, #SQL, #Java, #Figma, #WebScraping, #IFTTTWebhook, #AWS, #reCaptchaBypass, #botBypass, #Flask, #Selenium{
     background-color: #d5d5d5;
@@ -238,6 +237,8 @@ html{
     filter: blur(5px);
     transform: translateX(-10%);
     transition: all 1s;
+    will-change: opacity, filter, transform; /* Hint to browsers to optimize */
+
 }
 .aboutMe-enter.visible {
     opacity: 1;
@@ -249,6 +250,7 @@ html{
     filter: blur(5px);
     transform: translateX(10%);
     transition: all 1s;
+    will-change: opacity, filter, transform; /* Hint to browsers to optimize */
 }
 .aboutMe-enter2.visible {
     opacity: 1;
@@ -304,7 +306,9 @@ html{
     display: none;
     left: 50%;
     transform: translateX(-50%);
-
+}
+#cardThree, #cardFour, #cardFive{
+    padding-top: 4%;
 }
 .projectCardVideo{
     width: 90%;
@@ -381,9 +385,6 @@ html{
     color: white;
     padding-top: 5%;
     outline: blue 2px dotted;
-}
-#contactMethodContainer{
-
 }
 .contactMethods{
     text-align: center;
@@ -468,6 +469,10 @@ html{
         font-size: 3rem;
     }
 
+    #cardThree, #cardFour, #cardFive{
+        padding-top: 4%;
+    }
+
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
@@ -496,9 +501,15 @@ html{
     #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
         font-size: 4.85rem;
     }
+    #cardThree, #cardFour, #cardFive{
+        padding-top: 4%;
+    }
+
+    #loadMoreProjectsButton{
+        width: 15%;
+    }
 
 }
-
 
 @media only screen and (min-width: 822px) and (max-width: 1024px){
 
@@ -511,15 +522,30 @@ html{
         position: absolute;
         left: 0;
         width: 10%;
-        transition: width 0.5s ease; /* Smooth transition for the width property */
         height: 100%;
         top: 0;
-        z-index: 2;
+        z-index: 4;
         background-color: #181818;
         display: flex; /* enable flexbox */
         flex-direction: column; /* stack children vertically */
         align-items: center; /* center children horizontally */
     }
+    .leftPanelMoving{
+        width: 80vw;
+        height: 100%;
+        background-color: #181818;
+        z-index: 3;
+        position: absolute;
+        transform: translateX(-100%); /* Hide it off-screen to the left */
+        opacity: 1; /* Start with it being invisible */
+        transition: opacity 0.5s, transform 0.5s; /* Animate both opacity and transform */
+    }
+    .leftPanelMoving.visible {
+        transform: translateX(0); /* Move into view */
+        opacity: 1; /* Make it fully visible */
+    }
+
+
     #leftPanelLiteMenuImage{
         outline: red 2px dotted;
         background-color: transparent;
@@ -529,11 +555,643 @@ html{
         position: absolute;
     }
 
+    #liteAboutButton, #liteProjectsButton, #liteContactButton{
+        display: block;
+        background-color: transparent;
+        color: white;
+        width: 100%;
+        font-size: 1rem;
+        font-family: 'TikTok Font Regular', serif;
+        border: 0;
+    }
+    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv{
+        padding: 5%;
+    }
+    #liteAboutDiv{
+        margin-top: 18%;
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
+    #liteContactDiv{
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
+
+    .leftPanelMoving{
+        display: block;
+    }
+
+    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading{
+        font-size: 2.7rem;
+    }
+    #aboutMeBlock, #techStackBlock{
+        width: 45%;
+    }
+    #aboutMeBlock{
+        left: 5%
+    }
+    #techStackText{
+        width: 80%;
+    }
+    #HTML, #CSS, #JavaScript, #React, #Python, #Github, #SQL, #Java, #Figma, #WebScraping, #IFTTTWebhook, #AWS, #reCaptchaBypass, #botBypass, #Flask, #Selenium{
+        padding: 10px 22px;
+    }
+
+    #cardSection{
+        width: 95%;
+        margin-top: 2%;
+    }
+    .projectCard{
+        width: 50%;
+    }
+    #cardOne, #cardThree{
+        left: 0;
+    }
+    #cardThree, #cardFour{
+        padding-top: 5%;
+    }
+    #cardFive{
+        padding-top: 4%;
+    }
+    #loadMoreProjectsButton{
+        width: 15%;
+    }
+
+
+
 
 }
 
+@media only screen and (min-width: 769px) and (max-width: 821px){
+
+    #leftPanel, #leftPanelLetterD, #letterD, #role{
+        display: none;
+    }
+
+    #leftPanelLite{
+        outline: rebeccapurple 5px dotted;
+        position: absolute;
+        left: 0;
+        width: 10%;
+        height: 100%;
+        top: 0;
+        z-index: 4;
+        background-color: #181818;
+        display: flex; /* enable flexbox */
+        flex-direction: column; /* stack children vertically */
+        align-items: center; /* center children horizontally */
+    }
+    .leftPanelMoving{
+        width: 80vw;
+        height: 100%;
+        background-color: #181818;
+        z-index: 3;
+        position: absolute;
+        transform: translateX(-100%); /* Hide it off-screen to the left */
+        opacity: 1; /* Start with it being invisible */
+        transition: opacity 0.5s, transform 0.5s; /* Animate both opacity and transform */
+    }
+    .leftPanelMoving.visible {
+        transform: translateX(0); /* Move into view */
+        opacity: 1; /* Make it fully visible */
+    }
+
+
+    #leftPanelLiteMenuImage{
+        outline: red 2px dotted;
+        background-color: transparent;
+        border: none;
+        left: 12px;
+        top: 10%;
+        position: absolute;
+    }
+
+    #liteAboutButton, #liteProjectsButton, #liteContactButton{
+        display: block;
+        background-color: transparent;
+        color: white;
+        width: 100%;
+        font-size: 1rem;
+        font-family: 'TikTok Font Regular', serif;
+        border: 0;
+    }
+    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv{
+        padding: 5%;
+    }
+    #liteAboutDiv{
+        margin-top: 18%;
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
+    #liteContactDiv{
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
+
+    .leftPanelMoving{
+        display: block;
+    }
+
+    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading{
+        font-size: 2.5rem;
+    }
+    #aboutMeBlock, #techStackBlock{
+        width: 48%;
+    }
+    #aboutMeBlock{
+        left: 2%
+    }
+    #techStackText{
+        width: 80%;
+    }
+    #HTML, #CSS, #JavaScript, #React, #Python, #Github, #SQL, #Java, #Figma, #WebScraping, #IFTTTWebhook, #AWS, #reCaptchaBypass, #botBypass, #Flask, #Selenium{
+        padding: 10px 22px;
+    }
+
+    #cardSection{
+        width: 95%;
+        margin-top: 2%;
+    }
+    .projectCard{
+        width: 50%;
+    }
+    #cardOne, #cardThree{
+        left: 0;
+    }
+    #cardThree, #cardFour{
+        padding-top: 5%;
+    }
+    #cardFive{
+        padding-top: 4%;
+    }
+    #loadMoreProjectsButton {
+        width: 15%;
+    }
 
 
 
 
 
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px){
+
+    #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
+        font-size: 4.5rem;
+    }
+    #heroshotHeading1 {
+        margin-top: 22%;
+    }
+
+    #leftPanel, #leftPanelLetterD, #letterD, #role{
+        display: none;
+    }
+
+    #leftPanelLite{
+        outline: rebeccapurple 5px dotted;
+        position: absolute;
+        left: 0;
+        width: 10%;
+        height: 100%;
+        top: 0;
+        z-index: 4;
+        background-color: #181818;
+        display: flex; /* enable flexbox */
+        flex-direction: column; /* stack children vertically */
+        align-items: center; /* center children horizontally */
+    }
+    .leftPanelMoving{
+        width: 80vw;
+        height: 100%;
+        background-color: #181818;
+        z-index: 3;
+        position: absolute;
+        transform: translateX(-100%); /* Hide it off-screen to the left */
+        opacity: 1; /* Start with it being invisible */
+        transition: opacity 0.5s, transform 0.5s; /* Animate both opacity and transform */
+    }
+    .leftPanelMoving.visible {
+        transform: translateX(0); /* Move into view */
+        opacity: 1; /* Make it fully visible */
+    }
+
+
+    #leftPanelLiteMenuImage{
+        outline: red 2px dotted;
+        background-color: transparent;
+        border: none;
+        left: 10px;
+        top: 10%;
+        position: absolute;
+    }
+    #liteButtonImg{
+        height: 30px;
+    }
+
+    #liteAboutButton, #liteProjectsButton, #liteContactButton{
+        display: block;
+        background-color: transparent;
+        color: white;
+        width: 100%;
+        font-size: 1rem;
+        font-family: 'TikTok Font Regular', serif;
+        border: 0;
+    }
+    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv{
+        padding: 5%;
+    }
+    #liteAboutDiv{
+        margin-top: 18%;
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
+    #liteContactDiv{
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
+
+    .leftPanelMoving{
+        display: block;
+    }
+
+    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading{
+        font-size: 1.75rem;
+    }
+    #aboutMeBlock, #techStackBlock{
+        width: 50%;
+    }
+    #aboutMeBlock{
+        left: 0;
+    }
+    #aboutMeText, #techStackText{
+        width: 100%;
+        font-size: 0.95rem;
+    }
+    #HTML, #CSS, #JavaScript, #React, #Python, #Github, #SQL, #Java, #Figma, #WebScraping, #IFTTTWebhook, #AWS, #reCaptchaBypass, #botBypass, #Flask, #Selenium{
+        padding: 10px 22px;
+    }
+
+    #cardSection{
+        width: 95%;
+        margin-top: 2%;
+    }
+    .projectCard{
+        width: 50%;
+    }
+    #cardOne, #cardThree{
+        left: 0;
+    }
+    #cardThree, #cardFour, #cardFive{
+        padding-top: 10%;
+    }
+    #loadMoreProjectsButton {
+        width: 20%;
+        margin-top: 6%;
+    }
+
+    .projectCardTitle{
+        font-size: 0.9em;
+    }
+    .projectCardDescription, .projectCardGitHub, #localHost, .projectCardWebsite {
+        font-size: 0.8em;
+    }
+
+
+    #contactSectionGitHub, #contactSectionLinkedin, #contactSectionGmail{
+        font-size: 1.2rem;
+    }
+    .contactImages{
+        height: 48px
+    }
+
+
+
+
+
+
+}
+
+@media only screen and (min-width: 335px) and (max-width: 500px){
+
+    #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
+        font-size: 3.5rem;
+    }
+    #heroshotHeading1 {
+        margin-top: 22%;
+    }
+
+    #leftPanel, #leftPanelLetterD, #letterD, #role{
+        display: none;
+    }
+
+    #leftPanelLite{
+        outline: rebeccapurple 5px dotted;
+        position: absolute;
+        left: 0;
+        width: 10%;
+        height: 100%;
+        top: 0;
+        z-index: 4;
+        background-color: #181818;
+        display: flex; /* enable flexbox */
+        flex-direction: column; /* stack children vertically */
+        align-items: center; /* center children horizontally */
+    }
+    .leftPanelMoving{
+        width: 80vw;
+        height: 100%;
+        background-color: #181818;
+        z-index: 3;
+        position: absolute;
+        transform: translateX(-100%); /* Hide it off-screen to the left */
+        opacity: 1; /* Start with it being invisible */
+        transition: opacity 0.5s, transform 0.5s; /* Animate both opacity and transform */
+    }
+    .leftPanelMoving.visible {
+        transform: translateX(0); /* Move into view */
+        opacity: 1; /* Make it fully visible */
+    }
+
+
+    #leftPanelLiteMenuImage{
+        outline: red 2px dotted;
+        background-color: transparent;
+        border: none;
+        left: 5px;
+        top: 10%;
+        position: absolute;
+    }
+    #liteButtonImg{
+        height: 23px;
+    }
+
+    #liteAboutButton, #liteProjectsButton, #liteContactButton{
+        display: block;
+        background-color: transparent;
+        color: white;
+        width: 100%;
+        font-size: 1rem;
+        font-family: 'TikTok Font Regular', serif;
+        border: 0;
+    }
+    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv{
+        padding: 5%;
+    }
+    #liteAboutDiv{
+        margin-top: 50%;
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
+    #liteContactDiv{
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
+
+    .leftPanelMoving{
+        display: block;
+    }
+
+    #aboutMeHeading, #techStackHeading{
+        font-size: 1.55rem;
+        margin-top: 20%;
+    }
+
+    #projectsContainerHeading, #contactHeading{
+        font-size: 1.65rem;
+        padding-top: 20%;
+        outline: red 2px dotted;
+    }
+    #aboutMeBlock, #techStackBlock{
+        width: 50%;
+    }
+    #aboutMeBlock{
+        left: 0;
+    }
+    #aboutMeText, #techStackText{
+        width: 100%;
+        font-size: 0.8rem;
+    }
+    #HTML, #CSS, #JavaScript, #React, #Python, #Github, #SQL, #Java, #Figma, #WebScraping, #IFTTTWebhook, #AWS, #reCaptchaBypass, #botBypass, #Flask, #Selenium{
+        padding: 8px 15px;
+    }
+
+    #cardSection{
+        width: 95%;
+        margin-top: 12%;
+    }
+    .projectCard{
+        width: 50%;
+    }
+    #cardOne, #cardThree{
+        left: 0;
+    }
+    #cardThree, #cardFour, #cardFive{
+        padding-top: 15%;
+    }
+    #loadMoreProjectsButton {
+        width: 20%;
+        margin-top: 6%;
+    }
+
+    .projectCardTitle{
+        font-size: 0.825em;
+    }
+    .projectCardDescription, .projectCardGitHub, #localHost, .projectCardWebsite {
+        font-size: 0.75em;
+    }
+
+    #contactSectionGitHub, #contactSectionLinkedin, #contactSectionGmail{
+        font-size: 1rem;
+        margin-top: 15%;
+    }
+    .contactImages{
+        height: 38px
+    }
+    #contactHeading{
+        padding-top: 50%;
+    }
+
+    #aboutFooter, #projectsFooter, #contactFooter{
+        outline: blue 2px dotted;
+        text-align: center;
+        margin-top: 5%;
+    }
+
+
+
+
+
+
+}
+
+@media only screen and (max-width: 334px){
+
+    #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
+        font-size: 3.4rem;
+    }
+    #heroshotHeading1 {
+        margin-top: 22%;
+    }
+
+    #leftPanel, #leftPanelLetterD, #letterD, #role{
+        display: none;
+    }
+
+    #leftPanelLite{
+        outline: rebeccapurple 5px dotted;
+        position: absolute;
+        left: 0;
+        width: 10%;
+        height: 100%;
+        top: 0;
+        z-index: 4;
+        background-color: #181818;
+        display: flex; /* enable flexbox */
+        flex-direction: column; /* stack children vertically */
+        align-items: center; /* center children horizontally */
+    }
+    .leftPanelMoving{
+        width: 80vw;
+        height: 100%;
+        background-color: #181818;
+        z-index: 3;
+        position: absolute;
+        transform: translateX(-100%); /* Hide it off-screen to the left */
+        opacity: 1; /* Start with it being invisible */
+        transition: opacity 0.5s, transform 0.5s; /* Animate both opacity and transform */
+    }
+    .leftPanelMoving.visible {
+        transform: translateX(0); /* Move into view */
+        opacity: 1; /* Make it fully visible */
+    }
+
+
+    #leftPanelLiteMenuImage{
+        outline: red 2px dotted;
+        background-color: transparent;
+        border: none;
+        left: 2px;
+        top: 10%;
+        position: absolute;
+    }
+    #liteButtonImg{
+        height: 18px;
+    }
+
+    #liteAboutButton, #liteProjectsButton, #liteContactButton{
+        display: block;
+        background-color: transparent;
+        color: white;
+        width: 100%;
+        font-size: 1rem;
+        font-family: 'TikTok Font Regular', serif;
+        border: 0;
+    }
+    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv{
+        padding: 5%;
+    }
+    #liteAboutDiv{
+        margin-top: 50%;
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
+    #liteContactDiv{
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
+
+    .leftPanelMoving{
+        display: block;
+    }
+
+    #aboutMeHeading, #techStackHeading{
+        font-size: 1.35rem;
+        margin-top: 20%;
+    }
+
+    #projectsContainerHeading, #contactHeading{
+        font-size: 1.65rem;
+        padding-top: 20%;
+        outline: red 2px dotted;
+    }
+    #aboutMeBlock, #techStackBlock{
+        width: 50%;
+    }
+    #aboutMeBlock{
+        left: 0;
+    }
+    #aboutMeText, #techStackText{
+        width: 100%;
+        font-size: 0.7rem;
+    }
+    #HTML, #CSS, #JavaScript, #React, #Python, #Github, #SQL, #Java, #Figma, #WebScraping, #IFTTTWebhook, #AWS, #reCaptchaBypass, #botBypass, #Flask, #Selenium{
+        padding: 5px 12px;
+    }
+
+    #cardSection{
+        width: 95%;
+        margin-top: 12%;
+    }
+    .projectCard{
+        width: 50%;
+    }
+    #cardOne, #cardThree{
+        left: 0;
+    }
+    #cardThree, #cardFour, #cardFive{
+        padding-top: 10%;
+    }
+    #loadMoreProjectsButton {
+        width: 20%;
+        margin-top: 6%;
+    }
+
+    .projectCardTitle{
+        font-size: 0.6em;
+    }
+    .projectCardDescription, .projectCardGitHub, #localHost, .projectCardWebsite {
+        font-size: 0.6em;
+    }
+    .projectCardVideo{
+        height: 50%;
+    }
+
+    #contactSectionGitHub, #contactSectionLinkedin, #contactSectionGmail{
+        font-size: 1rem;
+        margin-top: 15%;
+    }
+    .contactImages{
+        height: 38px
+    }
+    #contactHeading{
+        padding-top: 50%;
+    }
+
+    #aboutFooter, #projectsFooter, #contactFooter{
+        outline: blue 2px dotted;
+        text-align: center;
+        margin-top: 4%;
+    }
+    #aboutFooterButton, #projectsFooterButton, #contactFooterButton{
+        font-size: 0.7em;
+    }
+
+    #createdBy{
+        font-size: 0.6em;
+    }
+
+
+
+
+
+    }
