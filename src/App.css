@@ -511,6 +511,33 @@ html{
     margin-top: 1%;
 }
 
+@media only screen and (min-width: 1441px) and (max-width: 1919px){
+    #cardSection{
+        width: 95%;
+        margin-top: 2%;
+    }
+    .projectCard{
+        width: 45%;
+    }
+    .projectCardVideo{
+        width: 95%;
+    }
+    #cardOne, #cardThree{
+        margin-left: 0;
+    }
+    #cardTwo, #cardFour{
+        margin-left: 5%;
+    }
+    #cardOne, #cardThree{
+        left: 0;
+    }
+    #cardThree, #cardFour{
+        padding-top: 5%;
+    }
+    #cardFive{
+        padding-top: 4%;
+    }
+}
 
 @media only screen and (min-width: 1281px) and (max-width: 1440px){
 
@@ -531,7 +558,29 @@ html{
         font-size: 3rem;
     }
 
-    #cardThree, #cardFour, #cardFive{
+    #cardSection{
+        width: 95%;
+        margin-top: 2%;
+    }
+    .projectCard{
+        width: 50%;
+    }
+    .projectCardVideo{
+        width: 90%;
+    }
+    #cardOne, #cardThree{
+        margin-left: -5%;
+    }
+    #cardTwo, #cardFour{
+        margin-left: 5%;
+    }
+    #cardOne, #cardThree{
+        left: 0;
+    }
+    #cardThree, #cardFour{
+        padding-top: 5%;
+    }
+    #cardFive{
         padding-top: 4%;
     }
 
@@ -572,6 +621,31 @@ html{
 
     #loadMoreProjectsButton{
         width: 15%;
+    }
+    #cardSection{
+        width: 95%;
+        margin-top: 2%;
+    }
+    .projectCard{
+        width: 50%;
+    }
+    .projectCardVideo{
+        width: 95%;
+    }
+    #cardOne, #cardThree{
+        margin-left: -5%;
+    }
+    #cardTwo, #cardFour{
+        margin-left: 5%;
+    }
+    #cardOne, #cardThree{
+        left: 0;
+    }
+    #cardThree, #cardFour{
+        padding-top: 5%;
+    }
+    #cardFive{
+        padding-top: 4%;
     }
 
 }
@@ -669,6 +743,15 @@ html{
     }
     .projectCard{
         width: 50%;
+    }
+    .projectCardVideo{
+        width: 110%;
+    }
+    #cardOne, #cardThree{
+        margin-left: -5%;
+    }
+    #cardTwo, #cardFour{
+        margin-left: 5%;
     }
     #cardOne, #cardThree{
         left: 0;
@@ -788,6 +871,15 @@ html{
     }
     .projectCard{
         width: 50%;
+    }
+    .projectCardVideo{
+        width: 125%;
+    }
+    #cardOne, #cardThree{
+        margin-left: -7.5%;
+    }
+    #cardTwo, #cardFour{
+        margin-left: 7.5%;
     }
     #cardOne, #cardThree{
         left: 0;
@@ -923,6 +1015,16 @@ html{
     .projectCard{
         width: 50%;
     }
+    .projectCardVideo{
+        width: 110%;
+    }
+    #cardOne, #cardThree{
+        margin-left: -5%;
+    }
+    #cardTwo, #cardFour{
+        margin-left: 5%;
+    }
+
     #cardOne, #cardThree{
         left: 0;
     }
@@ -1078,6 +1180,15 @@ html{
     }
     .projectCard{
         width: 50%;
+    }
+    .projectCardVideo{
+        width: 110%;
+    }
+    #cardOne, #cardThree{
+        margin-left: -5%;
+    }
+    #cardTwo, #cardFour{
+        margin-left: 5%;
     }
     #cardOne, #cardThree{
         left: 0;

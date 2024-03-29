@@ -67,7 +67,7 @@ export default function Project() {
           youtubeEmbedLink={
             "https://www.youtube.com/embed/NvJT4owqLro?si=ZKEv4Wgum99-_uXd"
           }
-          projectTitle={"Valentine's Day Website"}
+          projectTitle={"Valentine's Website"}
           projectDescription={"This website offers an interactive Valentine's Day experience. It features a straightforward, engaging interface where users are prompted to click to reveal a special message."}
           projectGitHub={
             "https://github.com/DFarynski99/valentinesDay2024"
@@ -83,7 +83,7 @@ export default function Project() {
             "https://www.youtube.com/embed/-Wa6pOK5CIU?vq=hd1080"
           }
           projectTitle={"SkyScanner Scraper"}
-          projectDescription={"Monitors SkyScanner for flight options that meet customisable criteria. Upon detecting a price below a threshold, an IFTTT webhook immediately sends email."}
+          projectDescription={"Monitors SkyScanner for flights that meet criteria. Upon detecting a price below a threshold, an IFTTT webhook immediately sends email."}
           projectGitHub={
             "https://github.com/DFarynski99/skyScannerScraper"
           }
