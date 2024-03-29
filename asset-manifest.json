@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ae4efd9e.css",
-    "main.js": "/static/js/main.2543b93f.js",
+    "main.css": "/static/css/main.18e6f040.css",
+    "main.js": "/static/js/main.0956ecec.js",
     "static/js/453.545a655a.chunk.js": "/static/js/453.545a655a.chunk.js",
     "static/media/TikTok Sans Regular.ttf": "/static/media/TikTok Sans Regular.60bdaebfd7e57e71eb6b.ttf",
     "static/media/TikTok Sans Bold.ttf": "/static/media/TikTok Sans Bold.20fcfc93190d56e59ffb.ttf",
@@ -13,12 +13,12 @@
     "static/media/MeeMee Kids Lettering.woff": "/static/media/MeeMee Kids Lettering.8159d2a7fb7692d7f5b3.woff",
     "static/media/MeeMee Kids Lettering.woff2": "/static/media/MeeMee Kids Lettering.78b6e77131045682d7ce.woff2",
     "index.html": "/index.html",
-    "main.ae4efd9e.css.map": "/static/css/main.ae4efd9e.css.map",
-    "main.2543b93f.js.map": "/static/js/main.2543b93f.js.map",
+    "main.18e6f040.css.map": "/static/css/main.18e6f040.css.map",
+    "main.0956ecec.js.map": "/static/js/main.0956ecec.js.map",
     "453.545a655a.chunk.js.map": "/static/js/453.545a655a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae4efd9e.css",
-    "static/js/main.2543b93f.js"
+    "static/css/main.18e6f040.css",
+    "static/js/main.0956ecec.js"
   ]
 }
