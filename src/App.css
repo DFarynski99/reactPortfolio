@@ -252,13 +252,14 @@ html{
     transform: translateX(-10%);
     transition: all 0.5s;
     will-change: opacity, filter, transform; /* Hint to browsers to optimize */
-
 }
 .aboutMe-enter.visible {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
 }
+
+
 .aboutMe-enter2 {
     opacity: 0;
     filter: blur(5px);
@@ -271,6 +272,55 @@ html{
     filter: blur(0);
     transform: translateX(0);
 }
+
+
+.aboutMe-enter3 {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(10%);
+    transition: all 0.75s;
+    will-change: opacity, filter, transform; /* Hint to browsers to optimize */
+}
+.aboutMe-enter3.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.arrow-container {
+    position: relative;
+    height: 200px; /* Adjust as needed */
+    width: 2px; /* Line thickness */
+    background: grey; /* Line color */
+    margin-left: 50px; /* Adjust as needed */
+    border-top-right-radius: 50px; /* Adjust as needed */
+}
+
+.arrow-container::before {
+    content: '';
+    position: absolute;
+    left: -10px; /* Half the width to center the line */
+    bottom: 0;
+    height: 50px; /* Adjust as needed */
+    width: 20px; /* Arrow width */
+    border-bottom: 2px solid grey; /* Adjust color and thickness as needed */
+    border-right: 2px solid grey; /* Adjust color and thickness as needed */
+    border-bottom-right-radius: 20px; /* Adjust as needed */
+}
+
+.arrow-container::after {
+    content: '';
+    position: absolute;
+    left: -10px; /* Adjust as needed to center the arrow */
+    bottom: -10px; /* Adjust as needed */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid grey; /* Arrow color */
+}
+
+
+
+
 
 
 /* Project Card Container */

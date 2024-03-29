@@ -31,8 +31,7 @@ export default function AboutMe({ sectionTitle }) {
     <div id={"techStackBlock"}>
       <div
         ref={domRef}
-        className={`aboutMe-enter2 ${isVisible ? "visible" : ""}`}
-      >
+        className={`aboutMe-enter2 ${isVisible ? "visible" : ""}`}>
         <div id={"techStackHeading"}>Tech Stack ✍️</div>
 
         <div id={"techStackText"}>

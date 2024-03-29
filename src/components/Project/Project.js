@@ -36,13 +36,13 @@ export default function Project() {
 
         return () => {
             if (currentRef) {
-                observer.unobserve(currentRef); // Cleanup
+                observer.unobserve(currentRef);
             }
         };
     }, []);
 
   return (
-      <div ref={domRef} className={`aboutMe-enter2 ${isVisible ? 'visible' : ''}`}>
+      <div ref={domRef} className={`aboutMe-enter3 ${isVisible ? 'visible' : ''}`}>
       <div id={"projectCardContainer"}>
       <div id={'projectsContainerHeading'}>Projects 🗂️</div>
       <div id={"cardSection"}>
