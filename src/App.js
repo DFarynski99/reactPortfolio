@@ -3,6 +3,7 @@ import LeftPanelLite from './components/LeftPanelLite/LeftPanelLite'
 import Heroshot from "./components/Heroshot/Heroshot";
 import About from "./components/About/About";
 import Project from "./components/Project/Project";
+import Capabilities from './components/Capabilities/Capabilities'
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
@@ -16,6 +17,7 @@ function App() {
         <Heroshot />
         <About />
         <Project />
+        <Capabilities />
         <Contact />
       </div>
       <Footer />

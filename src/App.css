@@ -406,7 +406,13 @@ html{
     left: 50%;
     width: 50% !important;
     font-family: 'Tiktok Font Regular', serif;
-
+}
+#cardFive .projectCardGitHub{
+    display: none;
+}
+#cardFive #localHost{
+    width: 100% !important;
+    left: 0;
 }
 .projectCardWebsite{
     color: blue;
@@ -468,13 +474,80 @@ html{
     align-items: center;  /* Centers items vertically */
     justify-content: center; /* Centers items horizontally */
 }
-#cardFive .projectCardGitHub{
-    display: none;
+
+
+/* Capabilities Section */
+#capabilitiesSection{
+    outline: cyan 2px dotted;
+    height: 100vh;
 }
-#cardFive #localHost{
-    width: 100% !important;
-    left: 0;
+#capabilitiesHeading{
+    font-family: 'Tiktok Font Bold', serif;
+    font-size: 3.5rem;
+    color: white;
+    position: relative;
+    text-align: center;
+    outline: red 2px dotted;
 }
+#capabilityOne{
+    width: 70%;
+    outline: blue 2px dotted;
+    position: relative;
+    height: 25%;
+    margin: 5% auto 0;
+}
+#capabilityVideoOne{
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+
+#capabilityTwo{
+    width: 70%;
+    outline: blue 2px dotted;
+    position: relative;
+    height: 25%;
+    margin: 12.5% auto 0;
+}
+#capabilityVideoTwo{
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+#video{
+    border-radius: 20px;
+}
+.title{
+    font-family: 'TikTok Font Bold', serif;
+    font-size: 1.75rem;
+    color: white;
+    font-weight: 700;
+    width: 35%;
+    margin-left: 7.5%;
+    padding-top: 2.5%;
+    outline: orange 2px dotted;
+}
+.description{
+    font-family: 'TikTok Font Regular', serif;
+    font-size: 1rem;
+    color: grey;
+    margin-top: 5%;
+    width: 40%;
+    margin-left: 7.5%;
+}
+.cta{
+    font-family: 'TikTok Font Bold', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 8%;
+    width: 70%;
+    margin-left: 7.5%;
+}
+
+
 
 
 /* Footer Section */
