@@ -348,12 +348,14 @@ html{
     font-family: 'Tiktok Font Regular', serif;
 }
 #loadMoreProjectsButton{
+    font-family: 'Tiktok Font Regular', serif;
     width: 12.5%;
     left: 50%;
     transform: translateX(-50%);
     position: relative;
     background-color: transparent;
     color: white;
+    outline: white 1px solid;
     display: block;
     padding: 8px;
     border: none;
@@ -526,11 +528,12 @@ html{
         z-index: 3;
         position: absolute;
         transform: translateX(-100%); /* Hide it off-screen to the left */
-        opacity: 1; /* Start with it being invisible */
-        transition: opacity 0.5s, transform 0.5s; /* Animate both opacity and transform */
+        top: 0;
+        opacity: 0; /* Start with it being invisible */
+        transition: opacity 0.2s, transform 0.5s; /* Animate both opacity and transform */
     }
     .leftPanelMoving.visible {
-        transform: translateX(0); /* Move into view */
+        transform: translateX(-5%); /* Move into view */
         opacity: 1; /* Make it fully visible */
     }
 
@@ -637,11 +640,12 @@ html{
         z-index: 3;
         position: absolute;
         transform: translateX(-100%); /* Hide it off-screen to the left */
-        opacity: 1; /* Start with it being invisible */
-        transition: opacity 0.5s, transform 0.5s; /* Animate both opacity and transform */
+        top: 0;
+        opacity: 0; /* Start with it being invisible */
+        transition: opacity 0.2s, transform 0.5s; /* Animate both opacity and transform */
     }
     .leftPanelMoving.visible {
-        transform: translateX(0); /* Move into view */
+        transform: translateX(-5%); /* Move into view */
         opacity: 1; /* Make it fully visible */
     }
 
@@ -756,11 +760,12 @@ html{
         z-index: 3;
         position: absolute;
         transform: translateX(-100%); /* Hide it off-screen to the left */
-        opacity: 1; /* Start with it being invisible */
-        transition: opacity 0.5s, transform 0.5s; /* Animate both opacity and transform */
+        top: 0;
+        opacity: 0; /* Start with it being invisible */
+        transition: opacity 0.2s, transform 0.5s; /* Animate both opacity and transform */
     }
     .leftPanelMoving.visible {
-        transform: translateX(0); /* Move into view */
+        transform: translateX(-5%); /* Move into view */
         opacity: 1; /* Make it fully visible */
     }
 
@@ -893,11 +898,12 @@ html{
         z-index: 3;
         position: absolute;
         transform: translateX(-100%); /* Hide it off-screen to the left */
-        opacity: 1; /* Start with it being invisible */
-        transition: opacity 0.5s, transform 0.5s; /* Animate both opacity and transform */
+        top: 0;
+        opacity: 0; /* Start with it being invisible */
+        transition: opacity 0.2s, transform 0.5s; /* Animate both opacity and transform */
     }
     .leftPanelMoving.visible {
-        transform: translateX(0); /* Move into view */
+        transform: translateX(-5%); /* Move into view */
         opacity: 1; /* Make it fully visible */
     }
 
@@ -975,7 +981,7 @@ html{
         left: 0;
     }
     #cardThree, #cardFour, #cardFive{
-        margin-top: 15%;
+        margin-top: 18%;
     }
     #loadMoreProjectsButton {
         width: 35%;
@@ -1040,15 +1046,16 @@ html{
     .leftPanelMoving{
         width: 80vw;
         height: 100%;
+        top: 0;
         background-color: #181818;
         z-index: 3;
         position: absolute;
         transform: translateX(-100%); /* Hide it off-screen to the left */
-        opacity: 1; /* Start with it being invisible */
-        transition: opacity 0.5s, transform 0.5s; /* Animate both opacity and transform */
+        opacity: 0; /* Start with it being invisible */
+        transition: opacity 0.2s, transform 0.5s; /* Animate both opacity and transform */
     }
     .leftPanelMoving.visible {
-        transform: translateX(0); /* Move into view */
+        transform: translateX(-5%); /* Move into view */
         opacity: 1; /* Make it fully visible */
     }
 
