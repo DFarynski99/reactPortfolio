@@ -97,6 +97,9 @@ html{
     font-family: 'TikTok Font Regular', serif;
     border: 0;
 }
+#leftPanelProjectButton:hover, #leftPanelAboutButton:hover, #leftPanelContactButton:hover{
+    cursor: pointer;
+}
 #leftPanelAboutDiv, #leftPanelProjectDiv, #leftPanelContactDiv{
     padding: 12.5%;
 }
@@ -263,7 +266,7 @@ html{
 #projectCardContainer{
     position: relative;
     outline: aqua 5px dotted;
-    height: 100vh;
+    height: 130vh;
     width: 100%;
 }
 #projectsContainerHeading{
@@ -279,7 +282,7 @@ html{
     left: 50%;
     transform: translateX(-50%);
     position: relative;
-    height: fit-content;
+    height: 100vh;
     margin-top: 3%;
 }
 .projectCard{
@@ -367,6 +370,7 @@ html{
     padding: 8px;
     outline: white 1px solid;
     border: none;
+    margin-top: 5%;
 }
 #loadMoreProjectsButton:hover{
     cursor: pointer;
@@ -441,6 +445,10 @@ html{
     font-family: 'Tiktok Font Regular', serif;
     font-size: 0.9em;
 }
+#aboutFooterButton:hover, #projectsFooterButton:hover, #contactFooterButton:hover{
+    cursor: pointer;
+}
+
 #createdBy{
     color: grey;
     text-align: center;
@@ -851,8 +859,8 @@ html{
         padding-top: 10%;
     }
     #loadMoreProjectsButton {
-        width: 20%;
-        margin-top: 6%;
+        width: 25%;
+        margin-top: 10%;
     }
 
     .projectCardTitle{
@@ -976,11 +984,11 @@ html{
         left: 0;
     }
     #aboutMeText, #techStackText{
-        width: 100%;
-        font-size: 0.8rem;
+        width: 85%;
+        font-size: 0.75rem;
     }
     #HTML, #CSS, #JavaScript, #React, #Python, #Github, #SQL, #Java, #Figma, #WebScraping, #IFTTTWebhook, #AWS, #reCaptchaBypass, #botBypass, #Flask, #Selenium{
-        padding: 8px 15px;
+        padding: 6px 13px;
     }
 
     #cardSection{
@@ -997,8 +1005,8 @@ html{
         padding-top: 15%;
     }
     #loadMoreProjectsButton {
-        width: 20%;
-        margin-top: 6%;
+        width: 35%;
+        margin-top: 20%;
     }
 
     .projectCardTitle{
@@ -1022,7 +1030,7 @@ html{
     #aboutFooter, #projectsFooter, #contactFooter{
         outline: blue 2px dotted;
         text-align: center;
-        margin-top: 5%;
+        margin-top: 4%;
     }
 
 

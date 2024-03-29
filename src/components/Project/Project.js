@@ -9,7 +9,7 @@ export default function Project() {
         const cardFive = document.getElementById('cardFive');
 
         if (projectCardContainer) {
-            projectCardContainer.style.height = '150vh';
+            projectCardContainer.style.height = '170vh';
             loadMoreButton.style.display = 'none'
             cardFive.style.display = 'block'
         }
