@@ -23,6 +23,14 @@ export default function Footer() {
             contactContainer.scrollIntoView({behavior: 'smooth'})
         }
     }
+    
+    const handleFooterCapabilitiesClick = () => {
+        const capabilitiesContainter = document.getElementById('capabilitiesSection');
+        if (capabilitiesContainter) {
+            capabilitiesContainter.scrollIntoView({behavior:'smooth'})
+        } 
+    }
+    
 
   return (
     <div id={"footerContainer"}>
@@ -32,6 +40,13 @@ export default function Footer() {
                 buttonID={"aboutFooterButton"}
                 buttonName={"About"}
                 onClick={handleFooterAboutClick} // Pass the handler function here
+            />
+            <FooterElements
+                divID={"capabilitiesFooter"}
+                buttonID={"capabilitiesFooterButton"}
+                buttonName={"Capabilities"}
+                onClick={handleFooterCapabilitiesClick} // Pass the handler function here
+
             />
             <FooterElements
                 divID={"projectsFooter"}

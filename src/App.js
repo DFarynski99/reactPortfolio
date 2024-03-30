@@ -1,26 +1,23 @@
-import LeftPanel from "./components/LeftPanel/LeftPanel";
-import LeftPanelLite from './components/LeftPanelLite/LeftPanelLite'
-import Heroshot from "./components/Heroshot/Heroshot";
-import About from "./components/About/About";
-import Project from "./components/Project/Project";
-import Capabilities from './components/Capabilities/Capabilities'
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CaptchaBypass from './components/CaptchaBypass/CaptchaBypass'
+import WebScraping from './components/WebScraping/WebScraping'
+import HomePage from './components/HomePage'
 import "./App.css";
 
 function App() {
   return (
     <>
-      <div id="AppContainer">
-        <LeftPanel />
-        <LeftPanelLite />
-        <Heroshot />
-        <About />
-        <Project />
-        <Capabilities />
-        <Contact />
-      </div>
-      <Footer />
+        <Router>
+                {/* Your navigation and other content */}
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/webscraping" element={<WebScraping />} />
+                    <Route path="/captchabypass" element={<CaptchaBypass />} />
+
+                    {/* ... other routes */}
+                </Routes>
+        </Router>
     </>
   );
 }

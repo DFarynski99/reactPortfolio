@@ -87,7 +87,7 @@ html{
 #leftPanelButtonCSS{
     width: 100%;
 }
-#leftPanelProjectButton, #leftPanelAboutButton, #leftPanelContactButton{
+#leftPanelProjectButton, #leftPanelAboutButton, #leftPanelContactButton, #leftPanelCapabilitiesButton, #leftPanelBlogHomeButton{
     background-color: transparent;
     color: white;
     width: 100%;
@@ -95,18 +95,23 @@ html{
     font-family: 'TikTok Font Regular', serif;
     border: 0;
 }
-#leftPanelProjectButton:hover, #leftPanelAboutButton:hover, #leftPanelContactButton:hover{
+#leftPanelProjectButton:hover, #leftPanelAboutButton:hover, #leftPanelContactButton:hover, #leftPanelCapabilitiesButton:hover, #leftPanelBlogHomeButton:hover{
     cursor: pointer;
 }
-#leftPanelAboutDiv, #leftPanelProjectDiv, #leftPanelContactDiv{
+#leftPanelAboutDiv, #leftPanelProjectDiv, #leftPanelCapabilitiesDiv, #leftPanelContactDiv, #leftPanelBlogHomeDiv{
     padding: 12.5%;
 }
-#leftPanelProjectDiv, #leftPanelContactDiv{
+#leftPanelProjectDiv, #leftPanelContactDiv, #leftPanelCapabilitiesDiv{
     border: 0 solid grey;
     border-top-width: 1px;
 }
 #leftPanelContactDiv{
     border-bottom-width: 1px;
+}
+#leftPanelBlogHomeDiv{
+    border: 0 solid grey;
+    border-bottom-width: 1px;
+
 }
 #socialsLeftPanel{
     position: relative;
@@ -132,7 +137,8 @@ html{
     width: 100%; /* full width of the root container */
     box-sizing: border-box; /* include padding and border in the element's total width and height */
     color: white;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
     position: relative;
     padding-top: 15%;
     padding-left: 5%;
@@ -185,12 +191,12 @@ html{
     color: white;
     position: relative;
     width: 100%;
-    height: 100vh;
-    min-height: 100vh; /* Or any appropriate styling */
+    min-height: 100vh;
+    height: fit-content;
 }
 
 
-#aboutMeHeading, #techStackHeading{
+#aboutMeHeading, #techStackHeading, #capabilitiesHeading{
     font-family: 'TikTok Font Bold', serif;
     font-size: 3.5rem;
 }
@@ -278,7 +284,7 @@ html{
     opacity: 0;
     filter: blur(5px);
     transform: translateX(10%);
-    transition: all 0.75s;
+    transition: all 1s;
     will-change: opacity, filter, transform; /* Hint to browsers to optimize */
 }
 .aboutMe-enter3.visible {
@@ -334,6 +340,7 @@ html{
     font-size: 3.5rem;
     color: white;
     position: relative;
+    margin-top: 5%;
     text-align: center;
 }
 #cardSection{
@@ -478,8 +485,8 @@ html{
 
 /* Capabilities Section */
 #capabilitiesSection{
-    outline: cyan 2px dotted;
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
 }
 #capabilitiesHeading{
     font-family: 'Tiktok Font Bold', serif;
@@ -487,11 +494,18 @@ html{
     color: white;
     position: relative;
     text-align: center;
-    outline: red 2px dotted;
+}
+#combinationText{
+    position: relative;
+    font-family: 'Tiktok Font Regular', serif;
+    font-size: 1.25rem;
+    color: #8a939d;
+    width: 75%;
+    text-align: center;
+    margin: 1% auto auto;
 }
 #capabilityOne{
     width: 70%;
-    outline: blue 2px dotted;
     position: relative;
     height: 25%;
     margin: 5% auto 0;
@@ -502,13 +516,11 @@ html{
     top: 0;
 }
 
-
 #capabilityTwo{
     width: 70%;
-    outline: blue 2px dotted;
     position: relative;
     height: 25%;
-    margin: 12.5% auto 0;
+    margin: 5% auto 0;
 }
 #capabilityVideoTwo{
     position: absolute;
@@ -523,29 +535,109 @@ html{
     font-family: 'TikTok Font Bold', serif;
     font-size: 1.75rem;
     color: white;
-    font-weight: 700;
     width: 35%;
     margin-left: 7.5%;
     padding-top: 2.5%;
-    outline: orange 2px dotted;
+    position: relative;
 }
 .description{
     font-family: 'TikTok Font Regular', serif;
-    font-size: 1rem;
-    color: grey;
-    margin-top: 5%;
+    font-size: 1.05rem;
+    color: #8a939d;
+    margin-top: 2%;
     width: 40%;
     margin-left: 7.5%;
 }
 .cta{
     font-family: 'TikTok Font Bold', serif;
     font-size: 1rem;
-    font-weight: 700;
     color: white;
-    margin-top: 8%;
-    width: 70%;
-    margin-left: 7.5%;
+    width: fit-content;
+    margin-left: 7%;
+    text-decoration: none;
+    position: relative;
 }
+.capabilityButton{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: 'TikTok Font Bold', serif;
+    margin-top: 4%;
+    font-size: 1rem;
+    left: 0;
+    margin-left: 0;
+}
+
+.cta::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Adjust this value to position the underline */
+    width: 0;
+    height: 2px;
+    background-color: white; /* Adjust color as needed */
+    visibility: hidden;
+    opacity: 0;
+    transition: width 0.2s ease, visibility 0s linear 0.2s, opacity 0.2s ease;
+}
+.cta:hover{
+    cursor: pointer;
+}
+.cta:hover::after {
+    width: 100%; /* Causes the underline to span the full width of the content */
+    visibility: visible; /* Makes the pseudo-element visible when hovered */
+    opacity: 1;
+    transition: width 0.2s ease, visibility 0s, opacity 0.2s ease;
+}
+
+/* WebScraping.js */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#webScrapingContainer, #captchaBypassContainer{
+    width: 80%;
+    position: relative;
+    height: 90vh;
+    top: 0;
+}
+.blogPostTitleClass{
+    font-family: 'Tiktok Font Bold', serif;
+    font-size: 3.5rem;
+    color: white;
+    position: relative;
+    text-align: center;
+    margin-top: 4%;
+}
+
+#blogPostVideoDiv{
+    height: 70%;
+    border-radius: 20px;
+    left: 52.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+
+}
+
+.blogPostTextAreaDiv{
+    margin-top: 4%;
+    width: 42.5%;
+    margin-left: 7.5%;
+    white-space: pre-line;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Tiktok Font Regular', serif;
+    padding: 2%;
+}
+
+#textAndVideoContainer{
+    position: relative;
+}
+
+
 
 
 
@@ -557,22 +649,22 @@ html{
 #footer{
     background-color: #181818;
     width: 100%;
-    height: 20%;
+    height: 22.5%;
     position: absolute;
     left: 0;
 }
-#aboutFooter, #projectsFooter, #contactFooter{
+#aboutFooter, #projectsFooter, #contactFooter, #capabilitiesFooter{
     text-align: center;
     margin-top: 1%;
 }
-#aboutFooterButton, #projectsFooterButton, #contactFooterButton{
+#aboutFooterButton, #projectsFooterButton, #contactFooterButton, #capabilitiesFooterButton{
     background-color: transparent;
     border: none;
     color: white;
     font-family: 'Tiktok Font Regular', serif;
     font-size: 0.9em;
 }
-#aboutFooterButton:hover, #projectsFooterButton:hover, #contactFooterButton:hover{
+#aboutFooterButton:hover, #projectsFooterButton:hover, #contactFooterButton:hover, #capabilitiesFooterButton:hover{
     cursor: pointer;
 }
 
@@ -584,7 +676,44 @@ html{
     margin-top: 1%;
 }
 
+
+@media only screen and (min-width: 1441px) and (max-width: 1700px){
+
+    .title{
+        font-size: 1.45rem;
+    }
+    .description{
+        font-size: 0.95rem;
+    }
+    .cta{
+        font-size: 1rem;
+    }
+
+}
+
 @media only screen and (min-width: 1441px) and (max-width: 1919px){
+
+    #webScrapingContainer, #captchaBypassContainer {
+        min-height: 100vh;
+        width: 90%;
+        left: 5%;
+    }
+
+    .blogPostTitleClass{
+        width: 100%;
+    }
+    #blogPostVideoDiv{
+        height: 62.5%;
+        left: 50%;
+    }
+    .blogPostTextAreaDiv{
+        margin-left: 2%;
+        margin-top: 5%;
+        width: 47.5%;
+        height: fit-content;
+    }
+
+
     #cardSection{
         width: 95%;
         margin-top: 2%;
@@ -614,6 +743,55 @@ html{
 
 @media only screen and (min-width: 1281px) and (max-width: 1440px){
 
+    #webScrapingContainer, #captchaBypassContainer {
+        min-height: 100vh;
+        width: 90%;
+        left: 5%;
+    }
+
+    .blogPostTitleClass{
+        width: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #blogPostVideoDiv{
+        height: 55%;
+        left: 50%;
+
+    }
+    .blogPostTextAreaDiv{
+        margin-left: 2%;
+        margin-top: 2%;
+        width: 47.5%;
+        height: fit-content;
+        font-size: 0.95rem;
+    }
+
+
+    .title{
+        font-size: 1.6rem;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    .cta{
+    }
+    .capabilityButton{
+        font-size: 1.1rem;
+        margin-top: 2%;
+    }
+    #capabilityTwo{
+        margin-top: 9.5%;
+    }
+    #capabilityVideoOne, #capabilityVideoTwo{
+        width: 45%;
+    }
+    #capabilityOne, #capabilityTwo{
+        width: 100%;
+        height: 35%;
+    }
+
+
     #HTML, #CSS, #JavaScript, #React, #Python, #Github, #SQL, #Java, #Figma, #WebScraping, #IFTTTWebhook, #AWS, #reCaptchaBypass, #botBypass, #Flask, #Selenium{
         background-color: #d5d5d5;
         color: #333;
@@ -626,9 +804,12 @@ html{
         text-align: center;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
-    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading{
+    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading, #capabilitiesHeading{
         font-family: 'TikTok Font Bold', serif;
         font-size: 3rem;
+    }
+    #combinationText{
+        font-size: 1.2rem;
     }
 
     #cardSection{
@@ -659,6 +840,115 @@ html{
 
 }
 
+
+/* ONLY FOR CAPABILITIES - Had to split @media query into two for Capabilities to adjust to viewport size */
+@media only screen and (min-width: 1101px) and (max-width: 1280px){
+
+    #webScrapingContainer, #captchaBypassContainer {
+        min-height: 100vh;
+        width: 90%;
+        left: 5%;
+    }
+
+    .blogPostTitleClass{
+        width: 100%;
+        left: 0;
+        font-size: 3rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #blogPostVideoDiv{
+        height: 47.5%;
+        left: 50%;
+
+    }
+    .blogPostTextAreaDiv{
+        margin-left: 2%;
+        margin-top: 2%;
+        width: 47.5%;
+        height: fit-content;
+        font-size: 0.9em;
+    }
+
+    .title{
+        font-size: 1.5rem;
+    }
+    .description{
+        font-size: 0.95rem;
+    }
+    .cta{
+    }
+    .capabilityButton{
+        font-size: 1rem;
+        margin-top: 2%;
+    }
+    #capabilityTwo{
+        margin-top: 11%;
+    }
+    #capabilityVideoOne, #capabilityVideoTwo{
+        width: 45%;
+    }
+    #capabilityOne, #capabilityTwo{
+        width: 100%;
+        height: 35%;
+    }
+}
+/* ONLY FOR CAPABILITIES - Had to split @media query into two for Capabilities to adjust to viewport size */
+@media only screen and (min-width: 1025px) and (max-width: 1100px){
+
+
+    #webScrapingContainer, #captchaBypassContainer {
+        min-height: 100vh;
+        width: 90%;
+        left: 5%;
+    }
+
+    .blogPostTitleClass{
+        width: 100%;
+        left: 0;
+        font-size: 3rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #blogPostVideoDiv{
+        height: 42.5%;
+        left: 50%;
+
+    }
+    .blogPostTextAreaDiv{
+        margin-left: 2%;
+        margin-top: 2%;
+        width: 47.5%;
+        height: fit-content;
+        font-size: 0.9em;
+    }
+
+
+    .title{
+        font-size: 1.3rem;
+    }
+    .description{
+        font-size: 0.85rem;
+    }
+    .cta{
+    }
+    .capabilityButton{
+        font-size: 0.9rem;
+        margin-top: 2%;
+    }
+    #capabilityTwo{
+        margin-top: 17.5%;
+    }
+    #capabilityVideoOne, #capabilityVideoTwo{
+        width: 45%;
+    }
+    #capabilityOne, #capabilityTwo{
+        width: 100%;
+        height: 35%;
+    }
+}
+
+
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
 
     #role{
@@ -668,9 +958,12 @@ html{
         padding: 10px 21px;
         font-size: 0.75em;
     }
-    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading{
+    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading, #capabilitiesHeading{
         font-family: 'TikTok Font Bold', serif;
         font-size: 3rem;
+    }
+    #combinationText{
+        font-size: 1.1rem;
     }
 
     #githubImageLeftPanel{
@@ -723,6 +1016,115 @@ html{
 
 }
 
+
+/* ONLY FOR CAPABILITIES - Had to split @media query into two for Capabilities to adjust to viewport size */
+@media only screen and (min-width: 900px) and (max-width: 1024px){
+
+    #webScrapingContainer, #captchaBypassContainer {
+        min-height: 100vh;
+        width: 90%;
+        left: 5%;
+    }
+
+    .blogPostTitleClass{
+        width: 100%;
+        left: 0;
+        font-size: 2.5rem;
+        padding-left: 5%;
+        padding-right: 5%;
+
+    }
+    #blogPostVideoDiv{
+        height: 42.5%;
+        left: 50%;
+
+    }
+    .blogPostTextAreaDiv{
+        margin-left: 2%;
+        margin-top: 2%;
+        width: 47.5%;
+        height: fit-content;
+        font-size: 0.9em;
+    }
+
+    .title{
+        font-size: 1.25rem;
+    }
+    .description{
+        font-size: 0.8rem;
+    }
+    .cta{
+    }
+    .capabilityButton{
+        font-size: 0.9rem;
+        margin-top: 2%;
+    }
+    #capabilityTwo{
+        margin-top: 17.5%;
+    }
+    #capabilityVideoOne, #capabilityVideoTwo{
+        width: 45%;
+    }
+    #capabilityOne, #capabilityTwo{
+        width: 100%;
+        height: 35%;
+    }
+}
+/* ONLY FOR CAPABILITIES - Had to split @media query into two for Capabilities to adjust to viewport size */
+@media only screen and (min-width: 822px) and (max-width: 899px){
+
+    #webScrapingContainer, #captchaBypassContainer {
+        min-height: 100vh;
+        width: 90%;
+        left: 5%;
+    }
+
+    .blogPostTitleClass{
+        width: 100%;
+        left: 0;
+        font-size: 2.5rem;
+        padding-left: 5%;
+        padding-right: 5%;
+
+    }
+    #blogPostVideoDiv{
+        height: 42.5%;
+        left: 50%;
+
+    }
+    .blogPostTextAreaDiv{
+        margin-left: 2%;
+        margin-top: 2%;
+        width: 47.5%;
+        height: fit-content;
+        font-size: 0.8em;
+    }
+
+    .title{
+        font-size: 1.15rem;
+    }
+    .description{
+        font-size: 0.75rem;
+    }
+    .cta{
+    }
+    .capabilityButton{
+        font-size: 0.9rem;
+        margin-top: 2%;
+    }
+    #capabilityTwo{
+        margin-top: 17.5%;
+    }
+    #capabilityVideoOne, #capabilityVideoTwo{
+        width: 45%;
+    }
+    #capabilityOne, #capabilityTwo{
+        width: 100%;
+        height: 35%;
+    }
+}
+
+
 @media only screen and (min-width: 822px) and (max-width: 1024px){
 
     #leftPanel, #leftPanelLetterD, #letterD, #role{
@@ -766,7 +1168,7 @@ html{
         position: absolute;
     }
 
-    #liteAboutButton, #liteProjectsButton, #liteContactButton{
+    #liteAboutButton, #liteProjectsButton, #liteContactButton, #liteCapabilitiesButton, #liteHomeButton{
         display: block;
         background-color: transparent;
         color: white;
@@ -775,7 +1177,14 @@ html{
         font-family: 'TikTok Font Regular', serif;
         border: 0;
     }
-    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv{
+    #liteHomeDiv{
+        margin-top: 18%;
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        padding: 4%;
+    }
+    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv, #liteCapabilitiesDiv{
         padding: 5%;
     }
     #liteAboutDiv{
@@ -789,13 +1198,20 @@ html{
         border-top-width: 1px;
         border-bottom-width: 1px;
     }
+    #liteProjectsDiv{
+        border: 0 solid grey;
+        border-top-width: 1px;
+    }
 
     .leftPanelMoving{
         display: block;
     }
 
-    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading{
+    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading, #capabilitiesHeading{
         font-size: 2.7rem;
+    }
+    #combinationText{
+        font-size: 1.05rem;
     }
     #aboutMeBlock, #techStackBlock{
         width: 45%;
@@ -846,6 +1262,55 @@ html{
 
 @media only screen and (min-width: 769px) and (max-width: 821px){
 
+
+    #webScrapingContainer, #captchaBypassContainer{
+        min-height: 100vh;
+        width: 90%;
+        left: 5%;
+    }
+
+    .blogPostTitleClass{
+        width: 100%;
+        left: 0;
+        font-size: 2.25rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #blogPostVideoDiv{
+        display: none;
+    }
+    .blogPostTextAreaDiv{
+        margin-left: 2%;
+        margin-top: 5%;
+        width: 95%;
+        height: fit-content;
+        font-size: 0.9em;
+        position: relative;
+    }
+
+
+    .title{
+        font-size: 0.95rem;
+    }
+    .description{
+        font-size: 0.75rem;
+    }
+    .capabilityButton{
+        font-size: 0.8rem;
+        margin-top: 2%;
+    }
+    #capabilityTwo{
+        margin-top: 17.5%;
+    }
+    #capabilityVideoOne, #capabilityVideoTwo{
+        width: 45%;
+    }
+    #capabilityOne, #capabilityTwo{
+        width: 100%;
+        height: 35%;
+    }
+
+
     #currentStatus{
         margin-top: 18%;
     }
@@ -894,7 +1359,7 @@ html{
         position: absolute;
     }
 
-    #liteAboutButton, #liteProjectsButton, #liteContactButton{
+    #liteAboutButton, #liteProjectsButton, #liteContactButton, #liteCapabilitiesButton, #liteHomeButton{
         display: block;
         background-color: transparent;
         color: white;
@@ -903,7 +1368,14 @@ html{
         font-family: 'TikTok Font Regular', serif;
         border: 0;
     }
-    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv{
+    #liteHomeDiv{
+        margin-top: 18%;
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        padding: 4%;
+    }
+    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv, #liteCapabilitiesDiv{
         padding: 5%;
     }
     #liteAboutDiv{
@@ -911,6 +1383,10 @@ html{
         border: 0 solid grey;
         border-top-width: 1px;
         border-bottom-width: 1px;
+    }
+    #liteProjectsDiv{
+        border: 0 solid grey;
+        border-top-width: 1px;
     }
     #liteContactDiv{
         border: 0 solid grey;
@@ -922,8 +1398,11 @@ html{
         display: block;
     }
 
-    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading{
+    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading, #capabilitiesHeading{
         font-size: 2.5rem;
+    }
+    #combinationText{
+        font-size: 1.05rem;
     }
     #aboutMeBlock, #techStackBlock{
         width: 48%;
@@ -973,7 +1452,102 @@ html{
 
 }
 
+
+/* ONLY FOR CAPABILITIES - Had to split @media query into two for Capabilities to adjust to viewport size */
+@media only screen and (min-width: 621px) and (max-width: 768px){
+    .title{
+        font-size: 0.8rem;
+        margin-left: 5%;
+        width: 35%;
+    }
+    .description{
+        font-size: 0.725rem;
+        margin-left: 5%;
+        width: 39%;
+    }
+    .cta{
+        margin-left: 5%;
+    }
+    .capabilityButton{
+        font-size: 0.8rem;
+        margin-top: 2%;
+    }
+    #capabilityTwo{
+        margin-top: 22.5%;
+    }
+    #capabilityVideoOne, #capabilityVideoTwo{
+        width: 55%;
+        left: 45%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #capabilityOne, #capabilityTwo{
+        width: 100%;
+        height: 35%;
+    }
+}
+/* ONLY FOR CAPABILITIES - Had to split @media query into two for Capabilities to adjust to viewport size */
+@media only screen and (min-width: 501px) and (max-width: 620px){
+    .title{
+        font-size: 0.8rem;
+        margin-left: 4%;
+        width: 39%;
+    }
+    .description{
+        font-size: 0.725rem;
+        margin-left: 4%;
+        width: 39%;
+    }
+    .cta{
+        margin-left: 4%;
+    }
+    .capabilityButton{
+        font-size: 0.8rem;
+        margin-top: 2%;
+    }
+    #capabilityTwo{
+        margin-top: 22.5%;
+    }
+    #capabilityVideoOne, #capabilityVideoTwo{
+        width: 55%;
+        left: 45%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #capabilityOne, #capabilityTwo{
+        width: 100%;
+        height: 35%;
+    }
+}
+
+
 @media only screen and (min-width: 501px) and (max-width: 768px){
+
+    #webScrapingContainer, #captchaBypassContainer{
+        min-height: 100vh;
+        width: 90%;
+        left: 5%;
+    }
+
+    .blogPostTitleClass{
+        width: 100%;
+        left: 0;
+        font-size: 2.25rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #blogPostVideoDiv{
+        display: none;
+    }
+    .blogPostTextAreaDiv{
+        margin-left: 2%;
+        margin-top: 5%;
+        width: 95%;
+        height: fit-content;
+        font-size: 0.9em;
+        position: relative;
+    }
+
 
     #currentStatus{
         margin-top: 18%;
@@ -1036,7 +1610,7 @@ html{
         height: 30px;
     }
 
-    #liteAboutButton, #liteProjectsButton, #liteContactButton{
+    #liteAboutButton, #liteProjectsButton, #liteContactButton, #liteCapabilitiesButton, #liteHomeButton{
         display: block;
         background-color: transparent;
         color: white;
@@ -1045,7 +1619,14 @@ html{
         font-family: 'TikTok Font Regular', serif;
         border: 0;
     }
-    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv{
+    #liteHomeDiv{
+        margin-top: 18%;
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        padding: 4%;
+    }
+    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv, #liteCapabilitiesDiv{
         padding: 5%;
     }
     #liteAboutDiv{
@@ -1053,6 +1634,10 @@ html{
         border: 0 solid grey;
         border-top-width: 1px;
         border-bottom-width: 1px;
+    }
+    #liteProjectsDiv{
+        border: 0 solid grey;
+        border-top-width: 1px;
     }
     #liteContactDiv{
         border: 0 solid grey;
@@ -1064,8 +1649,11 @@ html{
         display: block;
     }
 
-    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading{
+    #aboutMeHeading, #techStackHeading, #projectsContainerHeading, #contactHeading, #capabilitiesHeading{
         font-size: 1.75rem;
+    }
+    #combinationText{
+        font-size: 0.9rem;
     }
     #aboutMeBlock, #techStackBlock{
         width: 50%;
@@ -1133,6 +1721,77 @@ html{
 
 @media only screen and (min-width: 335px) and (max-width: 500px){
 
+    #webScrapingContainer, #captchaBypassContainer{
+        min-height: 100vh;
+        width: 90%;
+        left: 5%;
+    }
+
+    .blogPostTitleClass{
+        width: 100%;
+        left: 0;
+        font-size: 2rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #blogPostVideoDiv{
+        display: none;
+    }
+    .blogPostTextAreaDiv{
+        margin-left: 2%;
+        margin-top: 5%;
+        width: 95%;
+        height: fit-content;
+        font-size: 0.9em;
+        position: relative;
+    }
+
+
+
+    .title{
+        font-size: 0.9rem;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+    .description{
+        font-size: 0.7rem;
+        margin-left: 5%;
+        width: 90%;
+        text-align: center;
+        position: relative;
+
+    }
+    .cta {
+        margin: auto;
+        position: absolute; /* Change to absolute */
+        bottom: -8%; /* Add this line to align to the bottom */
+        left: 0; /* Align to the left */
+        right: 0; /* Align to the right */
+    }
+
+    .capabilityButton{
+        font-size: 0.9rem;
+        margin-top: 2%;
+    }
+    #capabilityTwo{
+        margin-top: 30%;
+        margin-bottom: 15%;
+    }
+    #capabilityVideoOne, #capabilityVideoTwo{
+        width: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        margin-top: 2%;
+    }
+    #capabilityOne, #capabilityTwo{
+        width: 100%;
+        height: 35%;
+        position: relative;
+    }
+
     #currentStatus{
         margin-top: 30%;
         font-size: 1rem;
@@ -1196,7 +1855,7 @@ html{
         height: 23px;
     }
 
-    #liteAboutButton, #liteProjectsButton, #liteContactButton{
+    #liteAboutButton, #liteProjectsButton, #liteContactButton, #liteCapabilitiesButton, #liteHomeButton{
         display: block;
         background-color: transparent;
         color: white;
@@ -1205,7 +1864,14 @@ html{
         font-family: 'TikTok Font Regular', serif;
         border: 0;
     }
-    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv{
+    #liteHomeDiv{
+        margin-top: 50%;
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        padding: 4%;
+    }
+    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv, #liteCapabilitiesDiv{
         padding: 5%;
     }
     #liteAboutDiv{
@@ -1213,6 +1879,10 @@ html{
         border: 0 solid grey;
         border-top-width: 1px;
         border-bottom-width: 1px;
+    }
+    #liteProjectsDiv{
+        border: 0 solid grey;
+        border-top-width: 1px;
     }
     #liteContactDiv{
         border: 0 solid grey;
@@ -1229,9 +1899,12 @@ html{
         margin-top: 20%;
     }
 
-    #projectsContainerHeading, #contactHeading{
+    #projectsContainerHeading, #contactHeading, #capabilitiesHeading{
         font-size: 1.65rem;
         padding-top: 20%;
+    }
+    #combinationText{
+        font-size: 0.9rem;
     }
     #aboutMeBlock, #techStackBlock{
         width: 50%;
@@ -1292,7 +1965,7 @@ html{
         padding-top: 50%;
     }
 
-    #aboutFooter, #projectsFooter, #contactFooter{
+    #aboutFooter, #projectsFooter, #contactFooter, #capabilitiesFooter{
         text-align: center;
         margin-top: 4%;
     }
@@ -1305,6 +1978,77 @@ html{
 }
 
 @media only screen and (max-width: 334px){
+
+    #webScrapingContainer, #captchaBypassContainer{
+        min-height: 100vh;
+        width: 90%;
+        left: 5%;
+    }
+
+    .blogPostTitleClass{
+        width: 100%;
+        left: 0;
+        font-size: 2rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    #blogPostVideoDiv{
+        display: none;
+    }
+    .blogPostTextAreaDiv{
+        margin-left: 2%;
+        margin-top: 5%;
+        width: 95%;
+        height: fit-content;
+        font-size: 0.9em;
+        position: relative;
+    }
+
+
+    .title{
+        font-size: 0.9rem;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        position: relative;
+    }
+    .description{
+        font-size: 0.7rem;
+        margin-left: 5%;
+        width: 90%;
+        text-align: center;
+        position: relative;
+
+    }
+    .cta {
+        margin: auto;
+        position: absolute; /* Change to absolute */
+        bottom: -8%; /* Add this line to align to the bottom */
+        left: 0; /* Align to the left */
+        right: 0; /* Align to the right */
+    }
+
+    .capabilityButton{
+        font-size: 0.9rem;
+        margin-top: 2%;
+    }
+    #capabilityTwo{
+        margin-top: 30%;
+        margin-bottom: 15%;
+    }
+    #capabilityVideoOne, #capabilityVideoTwo{
+        width: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        margin-top: 2%;
+    }
+    #capabilityOne, #capabilityTwo{
+        width: 100%;
+        height: 35%;
+        position: relative;
+    }
+
 
     #currentStatus{
         margin-top: 30%;
@@ -1369,7 +2113,7 @@ html{
         height: 18px;
     }
 
-    #liteAboutButton, #liteProjectsButton, #liteContactButton{
+    #liteAboutButton, #liteProjectsButton, #liteContactButton, #liteCapabilitiesButton, #liteHomeButton{
         display: block;
         background-color: transparent;
         color: white;
@@ -1378,7 +2122,14 @@ html{
         font-family: 'TikTok Font Regular', serif;
         border: 0;
     }
-    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv{
+    #liteHomeDiv{
+        margin-top: 50%;
+        border: 0 solid grey;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        padding: 4%;
+    }
+    #liteAboutDiv, #liteProjectsDiv, #liteContactDiv, #liteCapabilitiesDiv{
         padding: 5%;
     }
     #liteAboutDiv{
@@ -1386,6 +2137,10 @@ html{
         border: 0 solid grey;
         border-top-width: 1px;
         border-bottom-width: 1px;
+    }
+    #liteProjectsDiv{
+        border: 0 solid grey;
+        border-top-width: 1px;
     }
     #liteContactDiv{
         border: 0 solid grey;
@@ -1402,9 +2157,12 @@ html{
         margin-top: 20%;
     }
 
-    #projectsContainerHeading, #contactHeading{
+    #projectsContainerHeading, #contactHeading, #capabilitiesHeading{
         font-size: 1.65rem;
         padding-top: 20%;
+    }
+    #combinationText{
+        font-size: 0.9rem;
     }
     #aboutMeBlock, #techStackBlock{
         width: 50%;
@@ -1459,11 +2217,11 @@ html{
         padding-top: 50%;
     }
 
-    #aboutFooter, #projectsFooter, #contactFooter{
+    #aboutFooter, #projectsFooter, #contactFooter, #capabilitiesFooter{
         text-align: center;
         margin-top: 4%;
     }
-    #aboutFooterButton, #projectsFooterButton, #contactFooterButton{
+    #aboutFooterButton, #projectsFooterButton, #contactFooterButton, #capabilitiesFooterButton{
         font-size: 0.7em;
     }
 

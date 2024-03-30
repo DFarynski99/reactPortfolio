@@ -40,12 +40,21 @@ export default function LeftPanelLite({onClick}){
     }
 
 
+    const handleLiteCapabilitiesClick = () => {
+        const capabilitiesContainter = document.getElementById('capabilitiesSection');
+        if (capabilitiesContainter) {
+            capabilitiesContainter.scrollIntoView({behavior:'smooth'})
+        }
+    }
+
+
     return <><div id={'leftPanelLite'}>
         <button onClick={handleHamburgerMenuClick} id={'leftPanelLiteMenuImage'}><img id='liteButtonImg' src={hamburgerMenuImage}/></button>
         </div>
 
         <div className={'leftPanelMoving'}>
         <LeftPanelLiteButtons divID={'liteAboutDiv'} id={'liteAboutButton'} onClick={handleLiteAboutClick} buttonType={'About'} />
+        <LeftPanelLiteButtons divID={'liteCapabilitiesDiv'} id={'liteCapabilitiesButton'} onClick={handleLiteCapabilitiesClick} buttonType={'Capabilities'} />
         <LeftPanelLiteButtons divID={'liteProjectsDiv'} id={'liteProjectsButton'} onClick={handleLiteProjectsClick} buttonType={'Projects'} />
         <LeftPanelLiteButtons divID={'liteContactDiv'} id={'liteContactButton'} onClick={handleLiteContactClick} buttonType={'Contact'} />
         </div>

@@ -25,6 +25,13 @@ export default function LeftPanel(){
         }
     }
 
+    const handleLeftPanelCapabilitiesClick = () => {
+        const capabilitiesContainter = document.getElementById('capabilitiesSection');
+        if (capabilitiesContainter) {
+            capabilitiesContainter.scrollIntoView({behavior:'smooth'})
+        }
+    }
+
     return <div id={"leftPanel"}>
 
 
@@ -32,8 +39,10 @@ export default function LeftPanel(){
 
         <div id={'leftPanelButtonCSS'}> 
         <LeftPanelButtons divID={'leftPanelAboutDiv'} buttonID={'leftPanelAboutButton'} text={'About'} onClick={handleLeftPanelAboutClick}/>
+        <LeftPanelButtons divID={'leftPanelCapabilitiesDiv'} buttonID={'leftPanelCapabilitiesButton'} text={'Capabilities'} onClick={handleLeftPanelCapabilitiesClick}/>
         <LeftPanelButtons divID={'leftPanelProjectDiv'} buttonID={'leftPanelProjectButton'} text={'Projects'} onClick={handleLeftPanelProjectsClick}/>
         <LeftPanelButtons divID={'leftPanelContactDiv'} buttonID={'leftPanelContactButton'} text={'Contact'} onClick={handleLeftPanelContactClick}/>
+
         </div>
 
         <Socials />
