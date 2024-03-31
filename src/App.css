@@ -283,7 +283,7 @@ html{
 .aboutMe-enter3 {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(10%);
+    transform: translateX(-10%);
     transition: all 1s;
     will-change: opacity, filter, transform; /* Hint to browsers to optimize */
 }
@@ -334,6 +334,7 @@ html{
     position: relative;
     height: 130vh;
     width: 100%;
+    margin-top: 10%;
 }
 #projectsContainerHeading{
     font-family: 'Tiktok Font Bold', serif;
@@ -652,7 +653,7 @@ html{
 #footer{
     background-color: #181818;
     width: 100%;
-    height: 22.5%;
+    height: 24%;
     position: absolute;
     left: 0;
 }
@@ -723,9 +724,11 @@ html{
     }
     .projectCard{
         width: 45%;
+        padding-top: 0 !important;
     }
     .projectCardVideo{
         width: 95%;
+        height: 80% !important;
     }
     #cardOne, #cardThree{
         margin-left: 0;
@@ -736,11 +739,18 @@ html{
     #cardOne, #cardThree{
         left: 0;
     }
-    #cardThree, #cardFour{
-        padding-top: 5%;
+    #cardThree{
+        top: 12.5%;
+    }
+    #cardFour{
+        top: 52.5%;
     }
     #cardFive{
-        padding-top: 4%;
+        margin-top: 17.5%;
+    }
+    #loadMoreProjectsButton{
+        outline: white 1px solid;
+        margin-top: 17.5%;
     }
 }
 
@@ -821,9 +831,11 @@ html{
     }
     .projectCard{
         width: 50%;
+        padding-top: 0 !important;
     }
     .projectCardVideo{
         width: 90%;
+        height: 80% !important;
     }
     #cardOne, #cardThree{
         margin-left: -5%;
@@ -834,11 +846,18 @@ html{
     #cardOne, #cardThree{
         left: 0;
     }
-    #cardThree, #cardFour{
-        padding-top: 5%;
+    #cardThree{
+        top: 12.5%;
+    }
+    #cardFour{
+        top: 52.5%;
     }
     #cardFive{
-        padding-top: 4%;
+        margin-top: 24%;
+    }
+    #loadMoreProjectsButton{
+        outline: white 1px solid;
+        margin-top: 20%;
     }
 
 }
@@ -997,9 +1016,11 @@ html{
     }
     .projectCard{
         width: 50%;
+        padding-top: 0 !important;
     }
     .projectCardVideo{
         width: 95%;
+        height: 80% !important;
     }
     #cardOne, #cardThree{
         margin-left: -5%;
@@ -1010,11 +1031,18 @@ html{
     #cardOne, #cardThree{
         left: 0;
     }
-    #cardThree, #cardFour{
-        padding-top: 5%;
+    #cardThree{
+        top: 12.5%;
+    }
+    #cardFour{
+        top: 52.5%;
     }
     #cardFive{
-        padding-top: 4%;
+        margin-top: 24%;
+    }
+    #loadMoreProjectsButton{
+        outline: white 1px solid;
+        margin-top: 20%;
     }
 
 }

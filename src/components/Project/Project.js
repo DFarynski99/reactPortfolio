@@ -20,14 +20,24 @@ export default function Project() {
     const domRef = useRef();
 
     useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.unobserve(entry.target); // Stop observing the target after it becomes visible
-                }
-            });
-        });
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true);
+                        observer.unobserve(entry.target); // Stop observing the target
+                    }
+                });
+            },
+            {
+                // Root margin can be adjusted as needed, e.g., "-100px" delays the trigger
+                // until the target is well within the viewport. Play with this value.
+                rootMargin: '-100px',
+                // Threshold set to 0.1 means the callback will trigger when 10%
+                // of the target is visible. Adjust based on your needs.
+                threshold: 0.1
+            }
+        );
 
         const currentRef = domRef.current;
         if (currentRef) {
@@ -36,7 +46,7 @@ export default function Project() {
 
         return () => {
             if (currentRef) {
-                observer.unobserve(currentRef);
+                observer.unobserve(currentRef); // Cleanup
             }
         };
     }, []);
