@@ -567,6 +567,9 @@ html{
     left: 0;
     margin-left: 0;
 }
+.capabilityButton:hover{
+    cursor: pointer;
+}
 
 .cta::after {
     content: '';

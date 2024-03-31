@@ -24,7 +24,7 @@ export default function CaptchaBypass(){
             <div id={"captchaBypassContainer"}>
                 <Title title={"A Dive into Captcha's Efficacy and Bypass Techniques"} />
                 <div id={'textAndVideoContainer'}>
-                    <Video id={"blogPostVideoDiv"} src={"/sample-5s.mp4"} />
+                    <Video id={"blogPostVideoDiv"} src={"/captchaBypass.mp4"} />
                     <TextArea
                         className={"blogPostTextAreaDiv"}
                         message={
