@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c1d06b8b.css",
-    "main.js": "/static/js/main.23fe4c8a.js",
+    "main.js": "/static/js/main.ffef55c6.js",
     "static/js/453.545a655a.chunk.js": "/static/js/453.545a655a.chunk.js",
     "static/media/TikTok Sans Regular.ttf": "/static/media/TikTok Sans Regular.60bdaebfd7e57e71eb6b.ttf",
     "static/media/TikTok Sans Bold.ttf": "/static/media/TikTok Sans Bold.20fcfc93190d56e59ffb.ttf",
@@ -14,11 +14,11 @@
     "static/media/MeeMee Kids Lettering.woff2": "/static/media/MeeMee Kids Lettering.78b6e77131045682d7ce.woff2",
     "index.html": "/index.html",
     "main.c1d06b8b.css.map": "/static/css/main.c1d06b8b.css.map",
-    "main.23fe4c8a.js.map": "/static/js/main.23fe4c8a.js.map",
+    "main.ffef55c6.js.map": "/static/js/main.ffef55c6.js.map",
     "453.545a655a.chunk.js.map": "/static/js/453.545a655a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c1d06b8b.css",
-    "static/js/main.23fe4c8a.js"
+    "static/js/main.ffef55c6.js"
   ]
 }
