@@ -62,7 +62,7 @@ export default function Capabilities() {
           onClick={goToAbout}
           cta={"Explore →"}
           capabilityVideoNUMBER={"capabilityVideoOne"}
-          src={"/sample-5s.mp4"}
+          src={"/webScrapingV4.mp4"}
         />
 
         <CapabilityElement

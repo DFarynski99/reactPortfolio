@@ -41,7 +41,7 @@ export default function WebScraping() {
               "possibilities.\n\nHappy scraping!"
             }
           />
-          <Video id={"blogPostVideoDiv"} src={"/sample-5s.mp4"} />
+          <Video id={"blogPostVideoDiv"} src={"webScrapingV4.MP4"} />
         </div>
       </div>
     </>
