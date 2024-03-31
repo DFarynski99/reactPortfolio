@@ -85,7 +85,7 @@ export default function Capabilities() {
           onClick={goToCaptchaBypass}
           cta={"Read More →"}
           capabilityVideoNUMBER={"capabilityVideoTwo"}
-          src={"/captchaBypass.mp4"}
+          src={"/captchaBypassV4.mp4"}
         />
       </div>
     </div>
