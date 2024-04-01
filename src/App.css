@@ -698,6 +698,10 @@ html{
 
 @media only screen and (min-width: 1441px) and (max-width: 1919px){
 
+    #contactSection{
+        margin-top: 15%;
+    }
+
     #webScrapingContainer, #captchaBypassContainer {
         min-height: 100vh;
         width: 90%;
@@ -756,6 +760,10 @@ html{
 }
 
 @media only screen and (min-width: 1281px) and (max-width: 1440px){
+
+    #contactSection{
+        margin-top: 15%;
+    }
 
     #webScrapingContainer, #captchaBypassContainer {
         min-height: 100vh;
@@ -973,6 +981,10 @@ html{
 
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+
+    #contactSection{
+        margin-top: 15%;
+    }
 
     #role{
         font-size:0.8rem;
