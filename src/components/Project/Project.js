@@ -46,7 +46,7 @@ export default function Project() {
 
         return () => {
             if (currentRef) {
-                observer.unobserve(currentRef); // Cleanup
+                observer.unobserve(currentRef);
             }
         };
     }, []);
