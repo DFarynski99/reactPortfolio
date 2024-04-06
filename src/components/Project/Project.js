@@ -34,7 +34,7 @@ export default function Project() {
                 // until the target is well within the viewport. Play with this value.
                 rootMargin: '-100px',
                 // Threshold set to 0.1 means the callback will trigger when 10%
-                // of the target is visible. Adjust based on your needs.
+                // of the target is visible.
                 threshold: 0.1
             }
         );
