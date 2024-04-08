@@ -20,7 +20,7 @@ export default function AboutMe({ sectionTitle }) {
           // until the target is well within the viewport. Play with this value.
           rootMargin: '-100px',
           // Threshold set to 0.1 means the callback will trigger when 10%
-          // of the target is visible
+          // of the target is visible.
           threshold: 0.1
         }
     );
