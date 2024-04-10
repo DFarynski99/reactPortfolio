@@ -2,6 +2,7 @@ html{
     background-color: #1c1c1c;
 }
 
+/* Fonts */
 @font-face {
     font-family: 'TikTok Font Bold';
     src: url('./fonts/TikTok Sans Bold.woff2') format('woff2'),
