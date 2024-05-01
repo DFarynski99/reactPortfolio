@@ -28,6 +28,25 @@ html{
     font-style: normal;
 }
 
+.typing-effect .cursor {
+    display: inline-block;
+    background-color: red; /* Initial color */
+    width: 2px !important;
+    height: 1em !important;
+    animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+    0%, 100% {
+        background-color: rgb(255, 255, 255); /* Color visible most of the time */
+    }
+    50% {
+        background-color: transparent; /* Color during the 'blink' */
+        width: 5px; /* Increase width during blink */
+    }
+}
+
+
 
 #root {
     width: 100%; /* full width of the viewport */
@@ -144,13 +163,43 @@ html{
     padding-top: 15%;
     padding-left: 5%;
 }
-#heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
+#heroshotHeading1, #heroshotHeading2, #typingEffect {
     height: fit-content;
     font-family: "TikTok Font Bold", serif;
     font-size: 5.5rem;
     padding-top: 2.5%;
     width: fit-content;
 }
+#cursor {
+    position: relative;
+    display: inline-block;
+    font-family: "TikTok Font Regular", serif;
+    font-size: 5.5rem;
+    font-weight: 100;
+    color: transparent; /* Hide the text color */
+}
+
+#cursor::after {
+    content: '|';
+    position: absolute;
+    left: 0;
+    color: rgb(255, 255, 255); /* Visible color of the cursor */
+    animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
 #contrastLetter{
     font-size: 6rem;
 }
@@ -1011,8 +1060,11 @@ html{
         transform: translateX(-80%);
     }
 
-    #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
+    #heroshotHeading1, #heroshotHeading2, #typingEffect {
         font-size: 4.85rem;
+    }
+    #cursor {
+        font-size: 5rem;
     }
     #contrastLetter{
         font-size: 5.35rem;
@@ -1601,8 +1653,11 @@ html{
         margin-left: -11%;
     }
 
-    #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
+    #heroshotHeading1, #heroshotHeading2, #typingEffect {
         font-size: 4.5rem;
+    }
+    #cursor {
+        font-size: 4.75rem;
     }
     #contrastLetter{
         font-size: 5rem;
@@ -1846,8 +1901,11 @@ html{
         font-size: 0.9rem;
     }
 
-    #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
+    #heroshotHeading1, #heroshotHeading2, #typingEffect {
         font-size: 3.25rem;
+    }
+    #cursor {
+        font-size: 3.6rem;
     }
     #contrastLetter{
         font-size: 3.6rem;
@@ -2113,8 +2171,11 @@ html{
         font-size: 0.9rem;
     }
 
-    #heroshotHeading1, #heroshotHeading2, #heroshotHeading3 {
+    #heroshotHeading1, #heroshotHeading2, #typingEffect {
         font-size: 3.25rem;
+    }
+    #cursor {
+        font-size: 3.5rem;
     }
     #contrastLetter{
         font-size: 3.6rem;

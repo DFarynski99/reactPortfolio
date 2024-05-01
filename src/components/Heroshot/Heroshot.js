@@ -1,4 +1,5 @@
 import HeroshotHeading from "./HeroshotHeadings";
+import TypingEffect from "./TypingEffect";
 import React, { useEffect, useRef, useState } from 'react';
 
 export default function Heroshot() {
@@ -32,12 +33,9 @@ export default function Heroshot() {
     <div id={"heroshotContainer"}>
         <div ref={domRef} className={`aboutMe-enter ${isVisible ? 'visible' : ''}`}>
         <HeroshotHeading id={'heroshotHeading1'} text={"Hi,"}/>
-      <HeroshotHeading id={'heroshotHeading2'} text={"I'm Daniel,"}/>
-      <HeroshotHeading id={'heroshotHeading3'} text={"Software Engineer"}/>
+        <HeroshotHeading id={'heroshotHeading2'} text={"I'm Daniel,"}/>
+        <TypingEffect />
         </div>
-
-        <div id={'currentStatus'}>3rd Year Computer Science Student</div>
-
 
         <div id={'scrollDown'}>Scroll Down →</div>
     </div>

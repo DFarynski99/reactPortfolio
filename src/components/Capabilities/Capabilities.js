@@ -51,7 +51,7 @@ export default function Capabilities() {
     <div id={"capabilitiesSection"}>
       <div id={"capabilitiesHeading"}>Capabilities 💡</div>
       <div id={"combinationText"}>
-        'The synergy of Software Engineering and Cybersecurity empowers endless
+        'The synergy of Cybersecurity and Software Engineering empowers endless
         innovation'
       </div>
 

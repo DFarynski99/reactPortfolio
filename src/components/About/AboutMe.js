@@ -42,20 +42,18 @@ export default function AboutMe({ sectionTitle }) {
       <div id={"aboutMeBlock"}>
         <div id="aboutMeHeading">{sectionTitle}</div>
         <div id="aboutMeText">
-          I am a third-year Computer Science student at the University of
-          Wollongong, majoring in Software Engineering and Cybersecurity. I work
-          as a Cybersecurity Consultant at SALTT Technologies, defending our
-          digital future and striving to create safer digital societies for
-          everyone.
+          Daniel Farynski is a highly skilled cybersecurity consultant who works 
+          at SALTT Technologies. He is a student of Computer Science with a dual 
+          major in Cybersecurity and Software Engineering at the University of Wollongong. 
+          Daniel’s expertise lies in various aspects of cybersecurity, with a strong
+          focus on application and API security and the secure software development lifecycle.
           <br />
           <br />
-          In my spare time, I enjoy developing a suite of personal projects,
-          which are available on my GitHub. Each project has tangible,
-          real-world applications and covers a wide range of technologies. My
-          work showcases a combination of Software Engineering skills—such as
-          creating web applications and front-end pages—and Cybersecurity
-          expertise, including bypassing security measures like reCAPTCHA, rate
-          limiting, and automation detection.
+          Daniel's commitment to cybersecurity is not just a profession; it's a deep-rooted passion. 
+          His focus on application and API security and the secure software development lifecycle is 
+          driven by his love for software development, particularly in the context of cybersecurity. 
+          His technical prowess is balanced by a strong commitment to crafting responsible defence and 
+          mitigation strategies and assisting other developers in building secure applications.
         </div>
       </div>
     </div>
