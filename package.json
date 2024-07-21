@@ -19,8 +19,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build"
   },
   "eslintConfig": {
@@ -44,5 +42,5 @@
   "devDependencies": {
     "prettier": "^3.2.5"
   },
-  "homepage": "https://danielfarynski.com"
+  "homepage": "https://DFarynski99.github.io/reactPortfolio"
 }
