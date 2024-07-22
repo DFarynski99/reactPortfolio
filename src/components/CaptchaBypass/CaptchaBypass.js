@@ -14,6 +14,7 @@ export default function CaptchaBypass(){
         window.scrollTo(0, 0);
     }, []); // The empty array ensures this effect only runs once, when the component mounts
 
+    const captchaBypass = `${process.env.PUBLIC_URL}/captchaBypass.mp4`;
 
 
 
@@ -24,7 +25,7 @@ export default function CaptchaBypass(){
             <div id={"captchaBypassContainer"}>
                 <Title title={"A Dive into Captcha's Efficacy and Bypass Techniques"} />
                 <div id={'textAndVideoContainer'}>
-                    <Video id={"blogPostVideoDiv"} src={"/captchaBypassV4.mp4"} />
+                    <Video id={"blogPostVideoDiv"} src={captchaBypass} />
                     <TextArea
                         className={"blogPostTextAreaDiv"}
                         message={

@@ -10,6 +10,7 @@ export default function WebScraping() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []); // The empty array ensures this effect only runs once, when the component mounts
+  const webScraping = `${process.env.PUBLIC_URL}/webScrapingV4.mp4`;
 
   return (
     <>
@@ -41,7 +42,7 @@ export default function WebScraping() {
               "possibilities.\n\nHappy scraping!"
             }
           />
-          <Video id={"blogPostVideoDiv"} src={"webScrapingV4.mp4"} />
+          <Video id={"blogPostVideoDiv"} src={webScraping} />
         </div>
       </div>
     </>

@@ -2,7 +2,11 @@ import CapabilityElement from "./CapabilityElement";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
+
 export default function Capabilities() {
+  const webScraping = `${process.env.PUBLIC_URL}/webScrapingV4.mp4`;
+  const captchaBypass = `${process.env.PUBLIC_URL}/captchaBypass.mp4`;
+
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef();
 
@@ -72,7 +76,7 @@ export default function Capabilities() {
           onClick={goToAbout}
           cta={"Explore →"}
           capabilityVideoNUMBER={"capabilityVideoOne"}
-          src={"/webScrapingV4.mp4"}
+          src={webScraping}
         />
 
         <CapabilityElement
@@ -85,7 +89,7 @@ export default function Capabilities() {
           onClick={goToCaptchaBypass}
           cta={"Read More →"}
           capabilityVideoNUMBER={"capabilityVideoTwo"}
-          src={"/captchaBypassV4.mp4"}
+          src={captchaBypass}
         />
       </div>
     </div>
