@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/reactPortfolio/static/css/main.76163181.css",
-    "main.js": "/reactPortfolio/static/js/main.6dca3b1d.js",
+    "main.js": "/reactPortfolio/static/js/main.93fad3b0.js",
     "static/js/453.545a655a.chunk.js": "/reactPortfolio/static/js/453.545a655a.chunk.js",
     "static/media/TikTok Sans Regular.ttf": "/reactPortfolio/static/media/TikTok Sans Regular.60bdaebfd7e57e71eb6b.ttf",
     "static/media/TikTok Sans Bold.ttf": "/reactPortfolio/static/media/TikTok Sans Bold.20fcfc93190d56e59ffb.ttf",
@@ -14,11 +14,11 @@
     "static/media/MeeMee Kids Lettering.woff2": "/reactPortfolio/static/media/MeeMee Kids Lettering.78b6e77131045682d7ce.woff2",
     "index.html": "/reactPortfolio/index.html",
     "main.76163181.css.map": "/reactPortfolio/static/css/main.76163181.css.map",
-    "main.6dca3b1d.js.map": "/reactPortfolio/static/js/main.6dca3b1d.js.map",
+    "main.93fad3b0.js.map": "/reactPortfolio/static/js/main.93fad3b0.js.map",
     "453.545a655a.chunk.js.map": "/reactPortfolio/static/js/453.545a655a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76163181.css",
-    "static/js/main.6dca3b1d.js"
+    "static/js/main.93fad3b0.js"
   ]
 }
