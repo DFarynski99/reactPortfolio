@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/reactPortfolio/static/css/main.76163181.css",
-    "main.js": "/reactPortfolio/static/js/main.93fad3b0.js",
-    "static/js/453.545a655a.chunk.js": "/reactPortfolio/static/js/453.545a655a.chunk.js",
-    "static/media/TikTok Sans Regular.ttf": "/reactPortfolio/static/media/TikTok Sans Regular.60bdaebfd7e57e71eb6b.ttf",
-    "static/media/TikTok Sans Bold.ttf": "/reactPortfolio/static/media/TikTok Sans Bold.20fcfc93190d56e59ffb.ttf",
-    "static/media/TikTok Sans Bold.woff": "/reactPortfolio/static/media/TikTok Sans Bold.5d7da1e8bd72a5f25282.woff",
-    "static/media/TikTok Sans Regular.woff": "/reactPortfolio/static/media/TikTok Sans Regular.c5bebb3db954e1af2c22.woff",
-    "static/media/TikTok Sans Bold.woff2": "/reactPortfolio/static/media/TikTok Sans Bold.a9e94cf23ab0e727223d.woff2",
-    "static/media/TikTok Sans Regular.woff2": "/reactPortfolio/static/media/TikTok Sans Regular.da55f692763182d8f779.woff2",
-    "static/media/MeeMee Kids Lettering.ttf": "/reactPortfolio/static/media/MeeMee Kids Lettering.e4543519bf5f36bc7bee.ttf",
-    "static/media/MeeMee Kids Lettering.woff": "/reactPortfolio/static/media/MeeMee Kids Lettering.8159d2a7fb7692d7f5b3.woff",
-    "static/media/MeeMee Kids Lettering.woff2": "/reactPortfolio/static/media/MeeMee Kids Lettering.78b6e77131045682d7ce.woff2",
-    "index.html": "/reactPortfolio/index.html",
-    "main.76163181.css.map": "/reactPortfolio/static/css/main.76163181.css.map",
-    "main.93fad3b0.js.map": "/reactPortfolio/static/js/main.93fad3b0.js.map",
-    "453.545a655a.chunk.js.map": "/reactPortfolio/static/js/453.545a655a.chunk.js.map"
+    "main.css": "/static/css/main.fcda659b.css",
+    "main.js": "/static/js/main.cd60768f.js",
+    "static/js/453.545a655a.chunk.js": "/static/js/453.545a655a.chunk.js",
+    "static/media/TikTok Sans Regular.ttf": "/static/media/TikTok Sans Regular.60bdaebfd7e57e71eb6b.ttf",
+    "static/media/TikTok Sans Bold.ttf": "/static/media/TikTok Sans Bold.20fcfc93190d56e59ffb.ttf",
+    "static/media/TikTok Sans Bold.woff": "/static/media/TikTok Sans Bold.5d7da1e8bd72a5f25282.woff",
+    "static/media/TikTok Sans Regular.woff": "/static/media/TikTok Sans Regular.c5bebb3db954e1af2c22.woff",
+    "static/media/TikTok Sans Bold.woff2": "/static/media/TikTok Sans Bold.a9e94cf23ab0e727223d.woff2",
+    "static/media/TikTok Sans Regular.woff2": "/static/media/TikTok Sans Regular.da55f692763182d8f779.woff2",
+    "static/media/MeeMee Kids Lettering.ttf": "/static/media/MeeMee Kids Lettering.e4543519bf5f36bc7bee.ttf",
+    "static/media/MeeMee Kids Lettering.woff": "/static/media/MeeMee Kids Lettering.8159d2a7fb7692d7f5b3.woff",
+    "static/media/MeeMee Kids Lettering.woff2": "/static/media/MeeMee Kids Lettering.78b6e77131045682d7ce.woff2",
+    "index.html": "/index.html",
+    "main.fcda659b.css.map": "/static/css/main.fcda659b.css.map",
+    "main.cd60768f.js.map": "/static/js/main.cd60768f.js.map",
+    "453.545a655a.chunk.js.map": "/static/js/453.545a655a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.76163181.css",
-    "static/js/main.93fad3b0.js"
+    "static/css/main.fcda659b.css",
+    "static/js/main.cd60768f.js"
   ]
 }
