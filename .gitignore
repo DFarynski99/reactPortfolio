@@ -29,3 +29,8 @@ dist-ssr
 # Cloudflare Worker local secrets & state
 .dev.vars
 .wrangler
+
+# Local env (never commit keys)
+.env
+.env.local
+.env.*.local
