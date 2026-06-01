@@ -560,10 +560,6 @@ const Editorial = () => {
                 <div className="font-mono text-[11px] uppercase tracking-[0.15em] text-background/50">Email</div>
                 <div className="mt-1 text-lg transition-colors group-hover:text-accent">{profile.email}</div>
               </a>
-              <a href={`tel:${profile.phone}`} className="group block">
-                <div className="font-mono text-[11px] uppercase tracking-[0.15em] text-background/50">Phone</div>
-                <div className="mt-1 text-lg transition-colors group-hover:text-accent">{profile.phone}</div>
-              </a>
               <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="group block">
                 <div className="font-mono text-[11px] uppercase tracking-[0.15em] text-background/50">LinkedIn</div>
                 <div className="mt-1 text-lg transition-colors group-hover:text-accent">Connect →</div>
