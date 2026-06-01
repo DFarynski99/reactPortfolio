@@ -52,7 +52,6 @@ export const profile = {
   location: 'Australia',
   headshot,
   email: 'me@danielfarynski.com',
-  phone: '+61 431 548 963',
   linkedin: 'https://linkedin.com/in/danielfarynski',
   tagline:
     'I find the vulnerabilities attackers exploit, and build the secure, scalable applications that close them.',
