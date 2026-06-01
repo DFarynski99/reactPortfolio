@@ -20,6 +20,8 @@ import servicensw from '../servicensw.png';
 import moad from '../moad.png';
 import afsa from '../afsa.jpg';
 import arc from '../arc.png';
+import fedcourt from '../fedcourt.png';
+import fcfcoa from '../fcfcoa.png';
 
 // Case study media (optimized for web)
 import credentialImg from '../cred-opt.jpg';
@@ -194,6 +196,26 @@ export const bugBountyRankings: Ranking[] = [
     icon: Award,
     image: arc,
     link: 'https://www.arc.gov.au/about-arc/corporate-information/security-vulnerability-disclosure-policy',
+  },
+  {
+    title: 'Federal Court of Australia VDP',
+    ranking: 'Honour Board',
+    period: 'Recognition',
+    description:
+      'Disclosed a security vulnerability through the Federal Court of Australia Vulnerability Disclosure Program and assisted with remediation.',
+    icon: Award,
+    image: fedcourt,
+    link: 'https://www.fedcourt.gov.au/contact/prin/vulnerability-disclosure-program',
+  },
+  {
+    title: 'Federal Circuit and Family Court of Australia VDP',
+    ranking: 'Honour Board',
+    period: 'Recognition',
+    description:
+      'Disclosed a security vulnerability to the Federal Circuit and Family Court of Australia and assisted with remediation.',
+    icon: Award,
+    image: fcfcoa,
+    link: 'https://www.fcfcoa.gov.au/contact-us',
   },
 ];
 

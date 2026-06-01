@@ -55,17 +55,22 @@ function BugBountyCard({ r }: { r: Ranking }) {
   // (no external link) open their proof screenshot in a lightbox instead.
   const isLeaderboard = !r.link;
 
-  // meta + title + description, shared; image sits BELOW this and above the button
+  // ranking chip + period, sits full-width at the top of every card so the
+  // period (e.g. "All-Time" / "Recognition") always lands in the top-right.
+  const metaRow = (
+    <div className="mb-3 flex items-center gap-3">
+      <span className="bg-accent px-3 py-1 text-sm font-bold uppercase tracking-wide text-accent-foreground">
+        {r.ranking}
+      </span>
+      <span className="ml-auto font-mono text-xs font-medium uppercase tracking-[0.12em] text-foreground/60">
+        {r.period}
+      </span>
+    </div>
+  );
+
+  // title + description, shared
   const body = (
     <>
-      <div className="mb-3 flex items-center gap-3">
-        <span className="bg-accent px-3 py-1 text-sm font-bold uppercase tracking-wide text-accent-foreground">
-          {r.ranking}
-        </span>
-        <span className="ml-auto font-mono text-xs font-medium uppercase tracking-[0.12em] text-foreground/60">
-          {r.period}
-        </span>
-      </div>
       <h4 className="font-display text-2xl uppercase leading-[0.95] tracking-tight">{r.title}</h4>
       <p className="mt-4 text-base leading-relaxed text-foreground/80">{r.description}</p>
     </>
@@ -75,6 +80,7 @@ function BugBountyCard({ r }: { r: Ranking }) {
     return (
       <Dialog>
         <div className="flex basis-full grow-0 flex-col border border-foreground/20 bg-background p-6 md:basis-[calc(50%-0.5rem)] md:p-8">
+          {metaRow}
           {body}
           <DialogTrigger asChild>
             <button
@@ -105,27 +111,30 @@ function BugBountyCard({ r }: { r: Ranking }) {
   }
 
   return (
-    <div className="flex basis-full grow-0 flex-col gap-5 border border-foreground/20 bg-background p-6 sm:flex-row sm:items-center md:basis-[calc(50%-0.5rem)] md:p-8">
-      <div className="order-2 flex min-w-0 flex-1 flex-col sm:order-1">
-        {body}
-        <a href={r.link} target="_blank" rel="noopener noreferrer" className="btn-lime mt-6">
-          View Honour Board <ArrowUpRight className="h-4 w-4" />
-        </a>
-      </div>
-      <div
-        className={`order-1 flex shrink-0 items-center justify-center self-start overflow-hidden border border-foreground/15 bg-white sm:order-2 sm:self-auto ${
-          r.square ? 'p-3' : 'p-1.5'
-        }`}
-      >
-        <img
-          src={r.image}
-          alt={r.title}
-          className={
-            r.square
-              ? 'max-h-20 w-auto max-w-[110px] object-contain md:max-h-[120px] md:max-w-[130px]'
-              : 'max-h-14 w-auto max-w-[150px] object-contain md:max-h-[84px] md:max-w-[250px]'
-          }
-        />
+    <div className="flex basis-full grow-0 flex-col border border-foreground/20 bg-background p-6 md:basis-[calc(50%-0.5rem)] md:p-8">
+      {metaRow}
+      <div className="flex flex-1 flex-col gap-5 sm:flex-row sm:items-center">
+        <div className="order-2 flex min-w-0 flex-1 flex-col sm:order-1">
+          {body}
+          <a href={r.link} target="_blank" rel="noopener noreferrer" className="btn-lime mt-6">
+            View Honour Board <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
+        <div
+          className={`order-1 flex shrink-0 items-center justify-center self-start overflow-hidden border border-foreground/15 bg-white sm:order-2 sm:self-auto ${
+            r.square ? 'p-3' : 'p-1.5'
+          }`}
+        >
+          <img
+            src={r.image}
+            alt={r.title}
+            className={
+              r.square
+                ? 'max-h-20 w-auto max-w-[110px] object-contain md:max-h-[120px] md:max-w-[130px]'
+                : 'max-h-14 w-auto max-w-[150px] object-contain md:max-h-[84px] md:max-w-[250px]'
+            }
+          />
+        </div>
       </div>
     </div>
   );
