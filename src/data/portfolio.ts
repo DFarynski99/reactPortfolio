@@ -168,7 +168,7 @@ export const bugBountyRankings: Ranking[] = [
     link: 'https://www.service.nsw.gov.au/about-us/contact-us/vulnerability-disclosures',
   },
   {
-    title: 'AFSA VDP',
+    title: 'Australian Financial Security Authority VDP',
     ranking: 'Honour Board',
     period: 'Recognition',
     description:
