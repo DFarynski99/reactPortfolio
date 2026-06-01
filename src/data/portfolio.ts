@@ -215,7 +215,7 @@ export const bugBountyRankings: Ranking[] = [
       'Disclosed a security vulnerability to the Federal Circuit and Family Court of Australia and assisted with remediation.',
     icon: Award,
     image: fcfcoa,
-    link: 'https://www.fcfcoa.gov.au/contact-us',
+    link: 'https://www.fcfcoa.gov.au/policies-and-procedures/vulnerability-disclosure-program',
   },
 ];
 
