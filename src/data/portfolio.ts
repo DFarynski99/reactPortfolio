@@ -71,7 +71,7 @@ export const headlineStats = [
   { value: '#1', label: 'WHOOP All-Time' },
   { value: '#3', label: 'HackerOne Australia 2025' },
   { value: '50+', label: 'Businesses assisted' },
-  { value: '6', label: 'Gov VDP honours' },
+  { value: '9', label: 'Gov VDP honours' },
 ];
 
 export const certifications = [
