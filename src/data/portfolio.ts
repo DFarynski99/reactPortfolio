@@ -7,6 +7,7 @@ import giacGWAPT from '../GIAC-GWAPT.png';
 import giacGPEN from '../GIAC-GPEN.png';
 import giacGAWN from '../giacgawn.png';
 import htbCPTS from '../HTB-CPTS.png';
+import oscpPlus from '../OSCP-Plus.png';
 
 // Bug bounty / VDP proof imagery
 import hackeroneAustralia from '../HackerOne-Australia.jpeg';
@@ -22,6 +23,8 @@ import afsa from '../afsa.jpg';
 import arc from '../arc.png';
 import fedcourt from '../fedcourt.png';
 import fcfcoa from '../fcfcoa.png';
+import disr from '../disr.png';
+import actgov from '../actgov.png';
 
 // Case study media (optimized for web)
 import credentialImg from '../cred-opt.jpg';
@@ -41,8 +44,8 @@ import rttVideo from '../web-rtt.mp4';
 import rttPoster from '../web-rtt-poster.jpg';
 import subahireVideo from '../web-subahire.mp4';
 import subahirePoster from '../web-subahire-poster.jpg';
-import supapingVideo from '../web-supaping.mp4';
-import supapingPoster from '../web-supaping-poster.jpg';
+import innerwestVideo from '../web-innerwest.mp4';
+import innerwestPoster from '../web-innerwest-poster.jpg';
 import docsignVideo from '../web-docsign.mp4';
 import docsignPoster from '../web-docsign-poster.jpg';
 import portfolioVideo from '../web-portfolio.mp4';
@@ -72,6 +75,7 @@ export const headlineStats = [
 ];
 
 export const certifications = [
+  { name: 'OSCP+', description: 'OffSec Certified Professional Plus', logo: oscpPlus },
   { name: 'CREST CPSA', description: 'Certified Penetration Testing Specialist', logo: crestCPSA },
   { name: 'CREST CRT', description: 'Certified Registered Tester', logo: crestCRT },
   { name: 'GIAC GWAPT', description: 'Web Application Penetration Tester', logo: giacGWAPT },
@@ -216,6 +220,26 @@ export const bugBountyRankings: Ranking[] = [
     icon: Award,
     image: fcfcoa,
     link: 'https://www.fcfcoa.gov.au/policies-and-procedures/vulnerability-disclosure-program',
+  },
+  {
+    title: 'Department of Industry, Science and Resources VDP',
+    ranking: 'Honour Board',
+    period: 'Recognition',
+    description:
+      'Disclosed a security vulnerability through the Department of Industry, Science and Resources Vulnerability Disclosure Program and assisted with remediation.',
+    icon: Award,
+    image: disr,
+    link: 'https://www.industry.gov.au/site-notices/vulnerability-disclosure-policy',
+  },
+  {
+    title: 'ACT Government VDP',
+    ranking: 'Honour Board',
+    period: 'Recognition',
+    description:
+      'Disclosed a security vulnerability to the ACT Government through its system security vulnerability reporting process and assisted with remediation.',
+    icon: Award,
+    image: actgov,
+    link: 'https://www.act.gov.au/directorates-and-agencies/digital-canberra/digital-data-and-technology-solutions/report-a-system-security-vulnerability',
   },
 ];
 
@@ -364,6 +388,15 @@ export const webProjects: WebProject[] = [
     technologies: ['React', 'TypeScript', 'Supabase', 'Resend'],
   },
   {
+    title: 'Inner West Tax',
+    description:
+      'Tax and accounting built around your business — a hand-crafted site for a Sydney Inner West practice covering tax, BAS, advisory and cloud accounting.',
+    image: innerwestPoster,
+    video: innerwestVideo,
+    url: 'https://innerwesttax.com.au',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Cloudflare Pages'],
+  },
+  {
     title: 'Suba Hire',
     description:
       'Premium e-bike rentals for urban professionals, tourists and commuters, offering the freedom of electric mobility.',
@@ -398,15 +431,6 @@ export const webProjects: WebProject[] = [
     video: portfolioVideo,
     url: 'https://danielfarynski.com',
     technologies: ['React', 'TypeScript', 'Supabase', 'Resend'],
-  },
-  {
-    title: 'SupaPing',
-    description:
-      'Monitors free-tier Supabase projects to prevent inactivity pauses by injecting zero-impact daily queries, saving $25/month vs. the Pro tier.',
-    image: supapingPoster,
-    video: supapingVideo,
-    url: 'https://supaping.com',
-    technologies: ['React', 'TypeScript', 'Supabase', 'AWS'],
   },
 ];
 

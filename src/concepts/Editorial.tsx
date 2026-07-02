@@ -519,7 +519,7 @@ const Editorial = () => {
           <h3 className="mb-6 font-mono text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
             Certifications
           </h3>
-          <div className="mb-20 grid grid-cols-2 gap-px border border-foreground/15 bg-foreground/15 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="mb-20 grid grid-cols-2 gap-px border border-foreground/15 bg-foreground/15 sm:grid-cols-3 lg:grid-cols-7">
             {certifications.map((c) => (
               <div key={c.name} className="flex flex-col items-center bg-background p-6 text-center">
                 <img src={c.logo} alt={c.name} className="mb-4 h-20 w-auto object-contain" />
